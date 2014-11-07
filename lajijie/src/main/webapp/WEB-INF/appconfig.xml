@@ -1,0 +1,14 @@
+<config>
+	<class>com.liuy.lajijie.AppConfig</class>
+	<ssdb>{min:5,max:100,idle:10000,maxWait:5000,host:"192.168.0.245",port:8888,master:true}
+	</ssdb>
+	<wx>
+		<appId>wx956ff7ad35817159</appId>
+		<appSecret>318fe76b67f779c30843182254d75a7f</appSecret>
+		<authorizeUrl>http://1f666397.ngrok.com</authorizeUrl>
+	</wx>
+	<host>http://127.0.0.1</host>
+	<path>
+		<avatar>E:\workspace\wxgame\src\main\webapp\avatar\</avatar>
+	</path>
+</config>

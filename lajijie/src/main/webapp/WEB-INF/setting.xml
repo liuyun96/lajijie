@@ -1,0 +1,49 @@
+<config>
+	<!-- (可选，缺省为development)运行模式，可以使用development和production,test三种模式，分别对应下面3个数据库配置。 -->
+	<runmode>development</runmode>
+	<!--（必须） 指定应用的根package，所有内部自动注入都依赖于此package名称，请设置准确。 -->
+	<package>com.liuy.lajijie</package>
+	<license>
+		c4d454e373b80a6c1ffa5c6b282100b0fb494cb6a66bbce9e0eeeb0128642456b1755320c7912b2a56391dd6ee47d40a5224435f0e8729fc0f25c68b05566cc6bf502e3e9b0bb1d053243f171f53176041cd7b365ec4ee738685dbcadf3df725fdec14e1fe0d91320515d04bc5a0f80212d372713e5f9a6f0474d265244b648d042f97fe84850be140fef7764eae4f7c0104fd061ba57fc094cc483a78003681fdfdaf6e83f8b44cf1b0c35303312a6a59f9c24a8d64d823d583394dbd5417c7aae4ba21759319bbefd49df816e0b81865bf442cfb45b41113923c9b13a42fad3861fcdef7901bfe3098a37b49675d3a4cdcf44d8b388493347f9eb974687282aa8294d047e8c80bcabac0ea94ccd56ba866a261232a67bf1502d2656ba9a42fb0037a227bc23c8f82b71b0ade40448e4ca36ecd56e24dd16025a901aa5b7fbfcf0c1792cdf0d1ff8ae2516a388d0868d76a875c488a5cabfe5c22dd6153b91f9cb8dca0b44aafe547b8c5dce31e92dfa581c217e2a780dca9760169a9e7315977c8cb318996d9ed1fda5f56918ebeaf645c2b071bdd849463f933079686e212d5b28ffed57015d8cb6b2744c6c68056cbaa18ac72126b8607fbf500ba48af2600ffd91bc16eb043374a2243ab476a5d49eab13b024ee1f8a63334d04402312265b5e82d06d60672dc9f4961f710ab561b8209d69d4934198add31bed66b64e4
+	</license>
+	<web>
+		<!--（可选，缺省为root目录下的upload目录，大小为4M) 设置上传文件存放的路径和上传文件的最大尺寸 -->
+		<upload>
+			<directory>d:/temp</directory>
+			<max-size>2096</max-size>
+		</upload>
+		<!-- (可选)设置Request的编码类型。 -->
+		<charset>utf-8</charset>
+		<dateformat>yyyy-MM-dd hh:mm:ss</dateformat>
+		<!--(可选，缺省使用cn.quickj.session.MemHttpSession,你还可以选择MemCacheHttpSession进行分布式Session存储，缺省超时30分钟) 
+			HttpSession的设置。 -->
+		<session>
+			<class>cn.quickj.session.MemHttpSession</class>
+			<domain>*.kx88.cn</domain>
+			<timeout>3600</timeout>
+		</session>
+	</web>
+	<plugins>
+		<plugin>
+			<class>cn.quickj.logger.DynamicLoggerPlugin</class>
+		</plugin>
+	</plugins>
+	<!-- ( 可选，缺省使用SimpleCache，可以使用MemCache)cache类的设置及参数。 -->
+	<cache>
+		<class>cn.quickj.cache.RedisCache</class>
+		<param>
+			{min:5,max:100,idle:10000,maxWait:5000,host:"192.168.0.245",db:1,port:6379,master:true}
+		</param>
+	</cache>
+	<!-- 数据库设置 -->
+	<database>
+		<!-- 数据库的表前缀(暂时没有使用) -->
+		<prefix />
+		<development>
+		</development>
+		<!--production> <dialect></dialect> <driver>com.mysql.jdbc.Driver</driver> 
+			<url>jdbc:mysql://localhost:3306/quickj?useUnicode=true&amp;characterEncoding=gbk</url> 
+			<user>root</user> <password>hacker</password> <pool> <maxActive>10</maxActive> 
+			<initActive>2</initActive> <maxIdle>1800</maxIdle> </pool> </production -->
+	</database>
+</config>
