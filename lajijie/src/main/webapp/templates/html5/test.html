@@ -1,0 +1,112 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<script type="text/javascript" src="${ctx}/html5/m.js">
+	
+</script>
+
+<script type="text/javascript">
+	var appCache = window.applicationCache;
+
+	switch (appCache.status) {
+
+	case appCache.UNCACHED: // UNCACHED == 0
+
+		return 'UNCACHED';
+
+		break;
+
+	case appCache.IDLE: // IDLE == 1
+
+		return 'IDLE';
+
+		break;
+
+	case appCache.CHECKING: // CHECKING == 2
+
+		return 'CHECKING';
+
+		break;
+
+	case appCache.DOWNLOADING: // DOWNLOADING == 3
+
+		return 'DOWNLOADING';
+
+		break;
+
+	case appCache.UPDATEREADY: // UPDATEREADY == 4
+
+		return 'UPDATEREADY';
+
+		break;
+
+	case appCache.OBSOLETE: // OBSOLETE == 5
+
+		return 'OBSOLETE';
+
+		break;
+
+	default:
+
+		return 'UKNOWN CACHE STATUS';
+
+		break;
+
+	};
+	
+	var appCache = window.applicationCache;
+	appCache.update(); // Attempt to update the user’s cache.
+
+	if (appCache.status == window.applicationCache.UPDATEREADY) {
+		appCache.swapCache(); // The fetch was successful, swap in the new cache.
+	}
+
+	//Check if a new cache is available on page load.
+
+	window
+			.addEventListener(
+					'load',
+					function(e) {
+
+						window.applicationCache
+								.addEventListener(
+										'updateready',
+										function(e) {
+
+											if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+
+												// Browser downloaded a new app cache.
+
+												// Swap it in and reload the page to get the new hotness.
+
+												window.applicationCache
+														.swapCache();
+
+												if (confirm('A new version of this site is available. Load it?')) {
+
+													window.location.reload();
+
+												}
+
+											} else {
+
+												// Manifest didn't changed. Nothing new to server.
+
+											}
+
+										}, false);
+
+					}, false);
+</script>
+</head>
+<body>
+	ver:1
+	<p>
+		<input type="button" value="shwo_ver" onclick="show_ver();" />
+	<p>
+		<input type="button" value="load_js" onclick="load_js();" />
+	<p>
+		<input type="button" value="is_online" onclick="is_online();" />
+	<p>
+</body>
+</html>

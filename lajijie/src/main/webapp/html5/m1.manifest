@@ -1,0 +1,13 @@
+CACHE MANIFEST  
+# VERSION 4.0  
+  
+# 直接缓存的文件dd  
+CACHE:  
+m.js  
+m1.js  
+  
+# 需要在时间在线的文件  
+NETWORK:  
+  
+# 替代方案  
+FALLBACK: 

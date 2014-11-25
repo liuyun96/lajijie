@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Basic SSE Example</title>
+</head>
+<body>
+	Time:
+	<span id="foo"></span>
+	
+	up:
+	<span id="up"></span>
+
+	down:
+	<span id="down"></span>
+
+	<br>
+	<br>
+	<button onclick="start()">Start</button>
+
+	<script type="text/javascript">
+		function start() {
+			var eventSource = new EventSource("${ctx}/html5/MultipleEvents");
+
+			eventSource.onmessage = function(event) {
+
+				document.getElementById('foo').innerHTML = event.data;
+
+			};
+
+			eventSource.addEventListener('up_vote', function(event) {
+
+				document.getElementById('up').innerHTML = event.data;
+
+			}, false);
+			
+			eventSource.addEventListener('down_vote', function(event) {
+			     
+		        document.getElementById('down').innerHTML = event.data;
+		         
+		    }, false);
+		}
+	</script>
+</body>
+</html>

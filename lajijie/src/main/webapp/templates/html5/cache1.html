@@ -1,0 +1,25 @@
+<html manifest="m1.manifest">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<script type="text/javascript" src="m.js"></script>
+
+<script type="text/javascript">
+		//alert(window.applicationCache.status);
+		function updateCache(){
+			if(window.applicationCache.status == window.applicationCache.UPDATEREADY){
+				window.applicationCache.update();
+			}
+		}
+</script>
+</head>
+<body onload="updateCache()">
+	ver:1
+	<p>
+		<input type="button" value="shwo_ver" onclick="show_ver();" />
+	<p>
+		<input type="button" value="load_js" onclick="load_js();" />
+	<p>
+		<input type="button" value="is_online" onclick="is_online();" />
+	<p>
+</body>
+</html>
