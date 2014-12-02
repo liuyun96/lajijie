@@ -1,0 +1,95 @@
+
+<footer>
+	<div class="login-area" id="footer">
+		<div class="login">
+			<a rel="nofollow" href="${ctx}/index/user"> liuyun96 </a> <span
+				class="lg-bar">|</span> <a rel="nofollow"
+				href="${ctx}/index/user">退出</a>
+			<span class="new-fr"><a href="${ctx}/index/feedback">反馈</a><span
+				class="lg-bar">|</span><a
+				href="#">回到顶部</a></span>
+		</div>
+		<div class="version">
+			
+		</div>
+		<div class="copyright">© m.json.com</div>
+	</div>
+</footer>
+
+
+<div style="display: none;">
+	<img src="/js/ja.jsp">
+</div>
+
+<script type="text/javascript" src="/js/ping.min.js"></script>
+<script type="text/javascript">
+	try {
+		ping.init({
+			"userPin" : "liuyun96"
+		});
+	} catch (e) {
+	}
+</script>
+
+<script type="text/javascript">
+	$("#unsupport").hide();
+	if (!testLocalStorage()) { //not support html5
+		if (0 != 0 && !$clearCart && !$teamId) {
+			$("#html5_cart_num").text(0 > 0 > 0);
+		}
+	} else {
+		updateToolBar('');
+	}
+
+	$("#html5_cart").click(function() {
+		//	syncCart('5f8f2046d4dd1fab960c5ad7314ae85f',true);
+		location.href = 'http://m.jd.com/cart/cart.action';
+	});
+
+	function reSearch() {
+		var depCity = window.sessionStorage.getItem("airline_depCityName");
+		if (testSessionStorage() && isNotBlank(depCity)
+				&& !/^\s*$/.test(depCity) && depCity != "") {
+			var airStr = '<form action="/airline/list.action" method="post" id="reseach">'
+					+ '<input type="hidden" name="sid"  value="5f8f2046d4dd1fab960c5ad7314ae85f"/>'
+					+ '<input type="hidden" name="depCity" value="'
+					+ window.sessionStorage.getItem("airline_depCityName")
+					+ '"/>'
+					+ '<input type="hidden" name="arrCity" value="'
+					+ window.sessionStorage.getItem("airline_arrCityName")
+					+ '"/>'
+					+ '<input type="hidden" name="depDate" value="'
+					+ window.sessionStorage.getItem("airline_depDate")
+					+ '"/>'
+					+ '<input type="hidden" name="depTime" value="'
+					+ window.sessionStorage.getItem("airline_depTime")
+					+ '"/>'
+					+ '<input type="hidden" name="classNo" value="'
+					+ window.sessionStorage.getItem("airline_classNo")
+					+ '"/>'
+					+ '</form>';
+			$("body").append(airStr);
+			$("#reseach").submit();
+		} else {
+			window.location.href = 'http://m.jd.com/airline/index.action?sid=5f8f2046d4dd1fab960c5ad7314ae85f';
+		}
+	}
+	//banner 关闭点击
+	$('.div_banner_close').click(function() {
+		$('#div_banner_header').unbind('click');
+		jQuery.post('/index/addClientCookieVal.json', function(d) {
+			$('#div_banner_header').slideUp(500);
+		});
+	});
+	//banner 下载点击
+	$('.div_banner_download').click(
+			function() {
+				var downloadUrl = $(this).attr('url');
+				jQuery.post('http://m.jd.com/index/addClientCookieVal.json',
+						function(d) {
+							window.location.href = downloadUrl;
+						});
+			});
+</script>
+</body>
+</html>

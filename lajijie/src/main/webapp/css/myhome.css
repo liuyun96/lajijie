@@ -1,0 +1,745 @@
+@charset "utf-8";.new-header-v1 {
+    background: #edecec;
+}
+ 
+.new-header-v1 .new-a-back span {
+    background: url(/images/touch2013/icon_back.png) 0 0 no-repeat;
+    background-size: 10px 19px;
+}
+
+.new-a-jd2 {
+    position: absolute;
+    top: 6px;
+    right: 7px;
+    width: 37px;
+    height: 30px;
+}
+
+.new-header-v1 .new-a-jd2 span {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    margin: 5px 0 0 8px;
+    background: url(/images/touch2013/icon_jdj.png) 0 0 no-repeat;
+    background-size: 21px 20px;
+    text-indent: -9999px;
+}
+
+.new-a-back-v1 {
+    background-position: 3px -1431px;
+}
+
+.new-user-infobox {
+    position: relative;
+}
+
+.new-user-photo {
+    display: inline-block;
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    z-index: 100;
+    width: 75px;
+    height: 75px;
+}
+
+.new-bg-img {
+    position: relative;
+    min-width: 320px;
+    height: 103px;
+    background: #853600 url(/images/touch2013/bg_img.png) 50% 0 no-repeat;
+}
+
+.new-user-info {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 36px;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+}
+
+.new-user-info .new-txt,.new-user-info .new-txt2 {
+    display: block;
+    margin-left: 100px;
+    line-height: 16px;
+}
+
+.new-user-info .new-txt {
+    line-height: 20px;
+}
+
+.new-user-info .new-txt2 {
+    font-size: 12px;
+}
+
+.new-a-message {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 69px;
+    height: 20px;
+    padding: 8px 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.new-a-message .new-txt3,.new-a-message .new-txt4 {
+    display: inline-block;
+    height: 20px;
+    line-height: 20px;
+}
+
+.new-a-message .new-txt3 {
+    width: 20px;
+    background-color: #cd2a2c;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.new-user-info2 {
+    width: 100%;
+    height: 49px;
+    background: #fff;
+    background: -webkit-gradient(linear,center top,center bottom,from(#fff),color-stop(.6,#fff),color-stop(.6,#fff),to(#e5e2e2));
+    background: -moz-linear-gradient(center top,#fff 0,#fff 60%,#fff 60%,#e5e2e2 100%) repeat scroll 0 0;
+}
+
+.new-info-tbl-box {
+    margin-left: 90px;
+}
+
+.new-info-tbl {
+    display: table;
+    width: 100%;
+    padding: 5px 0 1px;
+}
+
+.new-info-tbl .new-tbl-cell {
+    display: table-cell;
+}
+
+.new-info-tbl .new-tbl-cell span {
+    display: block;
+    font-size: 12px;
+    text-align: center;
+}
+
+.new-section-lst {
+    padding: 20px 12px 30px;
+}
+
+.new-lst-ul {
+    margin-bottom: 20px;
+    border: 1px solid #999;
+}
+
+.new-lst-ul .new-lst-li {
+    border-top: 1px solid #999;
+}
+
+.new-lst-ul .new-lst-li .new-txt-rd {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.new-lst-ul .new-lst-li:first-child {
+    border-top: none;
+}
+
+.new-lst-ul .new-lst-li a {
+    display: block;
+    position: relative;
+    padding: 10px 12px;
+    font-size: 14px;
+    color: #6e6e6e;
+}
+
+.new-lst-ul .new-lst-li a .new-arr {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    width: 10px;
+    height: 10px;
+    background: url(/images/touch2013/icon.png) 100% -194px no-repeat;
+}
+
+.new-call-center {
+    padding: 10px 0;
+    background: #4a9b21;
+    font-size: 14px;
+    color: #fff;
+}
+
+.new-call-center .tell-tit {
+    width: 87px;
+    padding-right: 15px;
+    border-right: 1px solid #fff;
+    text-indent: 20px;
+}
+
+.new-call-center .tell-num {
+    background: url(/images/touch2013/call-center.png) 50% 4px no-repeat;
+    text-indent: -9999px;
+}
+
+.new-call-center span {
+    padding-left: 15px;
+}
+
+.new-ct {
+    background-color: #FFF;
+    min-height: 150px;
+}
+
+.new-myjd-home {
+    position: absolute;
+    top: 6px;
+    right: 12px;
+    width: 32px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.new-myjd-home span {
+    display: inline-block;
+    width: 22px;
+    height: 22px;
+    margin-top: 5px;
+    background: url(/images/touch2013/icon2b.png) -60px -25px no-repeat;
+    background-size: 180px 180px;
+    text-indent: -9999px;
+}
+
+.new-txt-float {
+    float: left;
+    width: 80px;
+}
+
+.new-block-ctr {
+    display: block;
+    padding-right: 85px;
+    text-align: center;
+}
+
+.user-bg {
+    height: 186px;
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+.user-wrapper {
+    overflow: hidden;
+}
+
+.user {
+    height: 94px;
+    margin-top: 20px;
+}
+
+.user-avatar {
+    -webkit-border-radius: 8px;
+    float: left;
+    display: block;
+    width: 70px;
+    height: 70px;
+    border: 2px solid #fff;
+    margin-left: 30px;
+}
+
+.user-info {
+    float: left;
+    margin-left: 24px;
+}
+
+.user-name,.user-level,.user-point {
+    display: block;
+    color: #fff;
+    line-height: 25px;
+}
+
+.user-level,.user-point {
+    opacity: .7;
+}
+
+.property-nav {
+    background: #bfbfbf;
+    display: -webkit-flex;
+}
+
+.property-nav li {
+    -webkit-flex: 1;
+    text-align: center;
+}
+
+.property-nav .link {
+    color: #fff;
+    line-height: 24px;
+}
+
+.property-nav strong {
+    display: block;
+}
+
+.shortcut-navs {
+    font-size: 14px;
+}
+
+.shortcut-nav {
+    height: 64px;
+    background: #f1f1f5;
+ 	width:100%;
+ 	display: block;
+}
+.shortcut-nav *{
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    -ms-box-sizing:border-box;
+    box-sizing:border-box;
+}
+.shortcut-nav li {
+    border-top: 1px solid #c8c7cc;
+    border-bottom: 1px solid #c8c7cc;
+    background: #fff;
+    text-align: center;
+    width: 25%;
+    overflow: hidden;
+    float:left;
+    display: block;
+    height: 100%;
+}
+
+.shortcut-nav .link {
+    display: inline-block;
+    width: 100%;
+    float: left;
+    margin-left: -1px;
+    position: relative;
+}
+
+.shortcut-nav li:last-child .link {
+    margin-left: 0;
+}
+
+.shortcut-nav .link1:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 222px 25px;
+    background-position: 0 0;
+    margin: 8px auto 4px auto;
+}
+
+.shortcut-nav .link2:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 222px 25px;
+    background-position: -25px 0;
+    margin: 8px auto 4px auto;
+}
+
+.shortcut-nav .link3:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 223px 25px;
+    background-position: -50px 0;
+    margin: 8px auto 4px auto;
+}
+
+.shortcut-nav .link4:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 221px 25px;
+    background-position: -98px 0;
+    margin: 8px auto 4px auto;
+}
+
+.shortcut-nav .link5:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 222px 25px;
+    background-position: -123px 0;
+    margin: 8px auto 4px auto;
+}
+
+.shortcut-nav .link6:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 221px 25px;
+    background-position: -147px 0;
+    margin: 8px auto 4px auto;
+}
+
+.shortcut-nav .link7:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 222px 25px;
+    background-position: -172px 0;
+    margin: 8px auto 4px auto;
+}
+
+.shortcut-nav .link8:before {
+    display: block;
+    content: '';
+    height: 25px;
+    width: 25px;
+    background: url(/images/touch2013/shortcut-nav-icons.png) no-repeat;
+    background-size: 222px 25px;
+    background-position: -197px -1px;
+    margin: 8px auto 4px auto;
+}
+/*
+.shortcut-nav li:after {
+    display: block;
+    content: '';
+    width: 1px;
+    height: 27px;
+    float: left;
+    margin-top: 18px;
+}
+*/
+.shortcut-nav:first-child li {
+    border-bottom: 0;
+}
+
+.shortcut-nav:last-child li {
+    border-top: 0;
+}
+
+.shortcut-nav:last-child {
+    padding-top: 0;
+}
+
+.link .tip_num {
+    color: #fff;
+    display: block;
+    background: #e4393c;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 3px;
+    left: 53%;
+    -webkit-border-radius: 9px;
+    font-size: 10px;
+    line-height: 17px;
+}
+
+.msg {
+    position: absolute;
+    display: block;
+    padding-top: 60px;
+    right: 17px;
+}
+
+.msg:after {
+    content: '';
+    background: url(/images/myjd2014/msg-icon2.png) no-repeat;
+    background-size: 100%;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    float: right;
+    margin-left: 5px;
+}
+
+.tab {
+    background: #f1f1f5;
+}
+
+.tab li {
+    padding-top: 5px;
+    display: block;
+    text-align: center;
+    position: relative;
+    float: left;
+    width: 33.333%;
+}
+
+.tab .item {
+    font-weight: bold;
+    color: #797979;
+    line-height: 40px;
+}
+
+.tab .current {
+    color: #a40000;
+}
+
+.tab .current:after {
+    content: ' ';
+    position: absolute;
+    background: #a40000;
+    display: block;
+    bottom: 0;
+    height: 3px;
+    width: 100%;
+}
+
+.tab-scroller {
+    width: 100%;
+}
+
+.more-wrapper {
+    height: 50px;
+    overflow: hidden;
+}
+
+.more-btn {
+    line-height: 20px;
+    height: 20px;
+    width: 62px;
+    border: 1px solid #c8c7cc;
+    -webkit-border-radius: 5px;
+    background: #f6f6f6;
+    font-size: 13px;
+    display: block;
+    text-align: center;
+    margin: 24px auto auto auto;
+}
+
+.tab-scroller {
+    overflow: hidden;
+}
+
+.my-focus li,.my-history li,.my-favorite li {
+    overflow: hidden;
+}
+
+.my-focus li,.my-history li {
+    border-bottom: 1px solid #aeaeae;
+}
+
+.my-focus img,.my-history img {
+    height: 65px;
+    width: 65px;
+    float: left;
+    margin: 20px 25px 20px 25px;
+}
+
+.my-focus .description,.my-history .description {
+    margin-top: 20px;
+    position: relative;
+}
+
+.title,.price,.sale-off {
+    display: block;
+    font-size: 12px;
+    color: #000;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+.my-focus .sale-off {
+    color: #838383;
+}
+
+.del {
+    display: block;
+    height: 20px;
+    width: 15px;
+    background: url(/images/touch2013/del.png) no-repeat;
+    background-size: 15px 20px;
+    position: absolute;
+    bottom: 0;
+    right: 15px;
+}
+
+.del {
+    padding: 10px;
+    background-position: 10px;
+    bottom: -10px;
+    right: 5px;
+}
+
+.my-favorite {
+    padding: 12px;
+}
+
+.my-favorite li {
+    margin-bottom: 8px;
+}
+
+.my-favorite img {
+    border: 1px solid #f3f3f3;
+    height: 50px;
+    width: 110px;
+    margin-right: 20px;
+}
+
+.my-favorite span {
+    color: #bd9c5a;
+    line-height: 6px;
+}
+
+.new-mu-heart {
+    display: inline-block;
+    overflow: hidden;
+    width: 87px;
+    height: 15px;
+    background: url(/images/touch2013/icon_heart.png) repeat-x 0 -12px;
+    background-size: 18px 25px;
+    font-size: 0;
+    vertical-align: -3px;
+}
+
+.new-mu-heartv {
+    display: inline-block;
+    height: 15px;
+    background: url(/images/touch2013/icon_heart.png) repeat-x 0 2px;
+    background-size: 18px 25px;
+}
+
+.my-favorite .left {
+    float: left;
+}
+
+.my-favorite .right {
+    float: right;
+}
+
+.new-spinner {
+    z-index: 10;
+    height: 80px;
+    width: 100px;
+    text-align: center;
+    display: none;
+}
+
+.new-spinner .new-wait-text {
+    padding-top: 160px;
+}
+
+.new-load-more {
+    padding: 25px 0;
+    text-align: center;
+    border-top: 1px solid #fcfbf9;
+    cursor: pointer;
+}
+
+.new-load-more span {
+    display: block;
+    width: 120px;
+    margin: 0 auto;
+    color: #67738a;
+}
+
+.service-list {
+    background: #fff;
+    padding-top: 22px;
+    min-height: 320px;
+}
+
+.service-list li {
+    overflow: hidden;
+    background: #fff;
+}
+
+.service-list li:first-child {
+    border-top: 1px solid #c8c7cc;
+}
+
+.service-list li:last-child {
+    border-bottom: 1px solid #c8c7cc;
+}
+
+.service-list a {
+    line-height: 40px;
+    margin-left: 16px;
+    display: inline-block;
+    border-bottom: 1px solid #c8c7cc;
+    width: 100%;
+    margin-right: -64px;
+}
+
+.service-list li:before {
+    display: inline-block;
+    content: '';
+    width: 25px;
+    height: 25px;
+    float: left;
+    margin-top: 7px;
+    margin-left: 20px;
+    background: url(/images/touch2013/service-icon.png) no-repeat;
+    background-size: 100px 25px;
+}
+
+.service-list .li1:before {
+    background-position: 0 0;
+}
+
+.service-list .li2:before {
+    background-position: -25px 0;
+}
+
+.service-list .li3:before {
+    background-position: -50px 0;
+}
+
+.service-list .li4:before {
+    background-position: -75px 0;
+}
+
+.service-list li:last-child a {
+    margin-bottom: -1px;
+}
+
+.div-user .new-tbl-type {
+    background: rgba(225,225,225,.3);
+    text-align: center;
+    padding: 5px 0;
+}
+
+.div-user .new-tbl-type .new-tbl-cell:first-child {
+    border-right: 1px solid #fff;
+}
+
+.div-user .new-tbl-type .new-tbl-cell span {
+    display: block;
+    margin-top: 1px;
+    overflow: hidden;
+    width: 100px;
+    text-align: left;
+    font-size: 24px;
+    color: #fff;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.div-user .new-tbl-type .new-tbl-cell .txt-samll {
+    font-size: 20px;
+    margin-bottom: -3px;
+    vertical-align: bottom;
+}
+
+.div-user .new-tbl-type .new-tbl-cell span:last-child {
+    font-size: 12px;
+}
+
+.tbl-price {
+    height: 57px;
+}

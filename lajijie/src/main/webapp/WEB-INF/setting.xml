@@ -22,6 +22,8 @@
 			<domain>*.kx88.cn</domain>
 			<timeout>3600</timeout>
 		</session>
+		<!-- 当应用直接输入根路径的时候，缺省跳转到指定的action中。 -->
+		<defaultUri>/index</defaultUri>
 	</web>
 	<plugins>
 		<plugin>

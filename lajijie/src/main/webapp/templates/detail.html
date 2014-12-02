@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<!-- saved from url=(0108)http://m.jd.com/detail/1057746.html?resourceType=list&resourceValue=655&sid=99ffe7d3218452f047aee3e3bf708c2f -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>京东触屏版</title>
+<meta name="author" content="m.jd.com">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="/css/base.css"
+	charset="gbk">
+
+<link rel="stylesheet" type="text/css" href="/css/extend.css"
+	charset="gbk">
+<link rel="stylesheet" type="text/css" href="/css/hotel.css"
+	charset="gbk">
+<link rel="stylesheet" type="text/css"
+	href="./京东触屏版详情_files/airline.css" charset="gbk">
+
+<link rel="apple-touch-icon-precomposed"
+	href="http://m.jd.com/images/apple-touch-icon.png">
+<script type="text/javascript">
+	var _winLocation = window.location.href;//获得当前页面的路径，根据路径规则进行逐页替换
+	var _isWebKit = '__proto__' in {};//是否是webkit内核
+	if (_isWebKit) {//如果是webkit内核，则分模块使用zepto
+		//要使用zeptojs的路径列表，可以做为分模块替换的开关
+		var _locationList = new Array();
+		//活动模块
+		_locationList.push('/activity/proActList');
+		_locationList.push('/activity/proActWareList');
+		_locationList.push('/activity/list');
+		//商品分类模块
+		_locationList.push('/category/');
+		//京东快讯模块
+		_locationList.push('/newslist.html');
+		_locationList.push('/newslist/');
+		_locationList.push('/news/');
+		//机票模块
+		_locationList.push('/airline/');
+		//酒店模块
+		_locationList.push('/hotel/');
+		//团购模块
+		_locationList.push('/tuan/');
+		//首页相关
+		_locationList.push('/hotbrand.html');//品牌馆
+		//商品筛选相关
+		_locationList.push('/ware/expandSort.action');
+		_locationList.push('/ware/categoryFilter.action');
+		_locationList.push('/ware/search.action');
+		_locationList.push('/products/');
+		_locationList.push('/index/getWare.action')//热门特惠
+		_locationList.push('/notice/');//通告模块
+		_locationList.push('/coupons/');//随地惠模块
+		_locationList.push('/chongzhi/');//手机充值模块
+		_locationList.push('/comment/');//手机推荐模块
+		_locationList.push('/pay/');//支付
+		_locationList.push('/order/');//订单
+		_locationList.push('/norder/');//订单
+
+		_locationList.push('/sale/act/');//sale
+		_locationList.push('/sale/mall/');//sale
+		//_locationList.push('/market/floorWare.action');//掌上专享
+
+		var _needReplace = false;
+		//如果当前路径符合要使用的路径规则，则进行替换
+		for (var i = 0; i < _locationList.length; i++) {
+			if (_winLocation.indexOf(_locationList[i]) != -1) {
+				_needReplace = true;
+				break;
+			}
+		}
+		//如果是首页的话，则使用zepto
+		var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g, '');
+		if (_tmp.indexOf('/') < 0
+				|| (_tmp.split('/').length <= 2 && _tmp.indexOf('/index') >= 0)) {
+			_needReplace = true;
+		}
+		//如果是商品详情页的话，则使用zepto
+		var _dlocationList = new Array();
+		_dlocationList.push(/\/product\/([0-9]+)\.html/);
+		_dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+		_dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+		_dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+		_dlocationList.push(/\/comments\/([0-9]+)\.html/);
+		for (var i = 0, len = _dlocationList.length; i < len; i++) {
+			if (_dlocationList[i].test(_winLocation)) {
+				_needReplace = true;
+				break;
+			}
+		}
+		if (_needReplace) {
+			document.write('<script src="/js/zepto.min.js"><\/script>');
+			document
+					.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+		} else {
+			document.write('<script src="/js/jquery-1.6.2.min.js"><\/script>');
+		}
+	} else {//如果是非webkit内核直接使用jquery
+		document.write('<script src="/js/jquery-1.6.2.min.js"><\/script>');
+	}
+</script>
+<script src="./京东触屏版详情_files/jquery-1.6.2.min.js"></script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/spin.min.js"></script>
+<style></style>
+<script src="./京东触屏版详情_files/installapp.js" type="text/javascript"
+	charset="utf-8"></script>
+</head>
+
+<body id="body" style="margin: 0px auto;">
+	<a name="top"></a>
+	<header>
+		<div class="download-con" id="down_app"
+			style="position: relative; display: none;">
+			<div class="down_app">
+				<div class="download-logo"></div>
+				<div class="alogo">
+					<p class="client-name">客户端首单返5元，抢更多特价商品！</p>
+					<p class="client-logon"></p>
+				</div>
+				<div class="open_now">
+					<a id="openJD"
+						app_href="openApp.jdMobile://virtual?params={&quot;category&quot;:&quot;jump&quot;,&quot;des&quot;:&quot;productDetail&quot;,&quot;skuId&quot;:&quot;1057746&quot;,&quot;sourceType&quot;:&quot;JSHOP_SOURCE_TYPE&quot;,&quot;sourceValue&quot;:&quot;JSHOP_SOURCE_VALUE&quot;}"
+						href="http://m.jd.com/download/downApp.html?sid=99ffe7d3218452f047aee3e3bf708c2f"><span
+						class="open_btn">立即打开</span></a>
+				</div>
+				<div class="close-btn-con close-btn">
+					<span class="close-btn-icon"></span>
+				</div>
+			</div>
+		</div>
+		<#include "tab.html"/>
+	</header>
+	<script type="text/javascript" src="./京东触屏版详情_files/nav.js"></script>
+	<style type="text/css">
+.nav-fixed {
+	position: fixed;
+	background-color: rgba(222, 222, 222, 0.7);
+	top: 0;
+	zoom: 1;
+	z-index: 10;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+table {
+	max-width: 100% !important;
+	width: auto !important;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	width: auto !important;
+	height: auto !important;
+}
+</style>
+
+	<div class="good-detail sift-mg">
+		<div class="sift-tab" style="height: 42px;">
+			<div id="fixed" class="sift-tab" style="height: 42px; width: 1403px;">
+				<ul class="tab-lst">
+					<li><a href="javascript:void(0)" value="wareInfo" class="on">商品介绍</a></li>
+					<li><a href="javascript:void(0)" value="wareStandard"><span
+							class="bar"></span>规格参数</a></li>
+					<li><a href="javascript:void(0)" value="warePack"><span
+							class="bar"></span>包装清单</a></li>
+					<li><a href="javascript:void(0)" value="wareService"><span
+							class="bar"></span>售后服务</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="detail" id="wareInfo" style="display: block;">
+			<p>
+				<span> </span>
+			</p>
+			<table border="0" width="506" style="width: 300px;">
+				<tbody>
+					<tr style="max-width: 300px;">
+						<td width="500" style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba130dNbb171f7e.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba1352N9c23a9a5.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba1350N0ee85dd3.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba133dN4d3ec220.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba1355Ncb21eb52.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba1357N81eedfc5.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba136bNe68516c7.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba1369N2b7e8c26.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba136cN76a5223e.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba136eN99525f0f.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba1370N52949f83.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+					<tr style="max-width: 300px;">
+						<td style="max-width: 300px; background-size: 300px;"><img
+							src="./京东触屏版详情_files/53ba137aN8ce4b67d.jpg" alt=""
+							style="max-width: 270px;"></td>
+					</tr>
+					<tr style="max-width: 300px;">
+					</tr>
+				</tbody>
+			</table>
+
+			<p></p>
+		</div>
+		<div class="detail" id="wareStandard" style="display: none;">
+			<style>
+.Ptable {
+	border-spacing: 0px;
+	border-collapse: collapse;
+}
+
+.Ptable td {
+	height: 10px;
+	padding: 0 5px;
+	line-height: 20px;
+	font-size: 12px;
+	color: #333;
+	word-break: break-all;
+}
+
+.Ptable th {
+	height: 10px;
+	line-height: 40px;
+	padding-left: 20px;
+	font-size: 18px;
+	text-align: left
+}
+
+.Ptable td.td-txtlft {
+	padding-left: 10px;
+	text-align: left
+}
+
+.Ptable .w130 {
+	width: 130px
+}
+
+.tdTitle {
+	text-align: center;
+	padding-left: 20px;
+	width: 130px
+}
+</style>
+			<p>
+				<span> </span>
+			</p>
+			<table cellpadding="0" cellspacing="1" width="100%" border="1"
+				class="Ptable">
+				<tbody>
+					<tr>
+						<th class="tdTitle" colspan="2">主体</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">品牌</td>
+						<td>苹果（Apple）</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">型号</td>
+						<td>iPhone 5s</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">颜色</td>
+						<td>金色</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">上市年份</td>
+						<td>2014年</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">输入方式</td>
+						<td>触控</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">智能机</td>
+						<td>是</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">3G视频通话</td>
+						<td>需使用第三方软件</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">操作系统</td>
+						<td>苹果（IOS）</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">操作系统版本</td>
+						<td>IOS</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">CPU品牌</td>
+						<td>苹果</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">CPU型号</td>
+						<td>A7芯片 M7运动协处理器</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">CPU频率</td>
+						<td>1.3GHz</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">CPU核数</td>
+						<td>双核</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">运营商标志或内容</td>
+						<td>无</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">网络</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">4G网络制式</td>
+						<td>移动4G（TD-LTE）/联通4G（FDD-LTE）/ 联通4G（TD-LTE）</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">3G网络制式</td>
+						<td>移动3G(TD-SCDMA)/联通3G(WCDMA)</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">2G网络制式</td>
+						<td>移动2G/联通2G(GSM)</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">网络频率</td>
+						<td>UMTS (WCDMA)/HSPA+/DC-HSDPA (850、900、1900、2100 MHz) <br>GSM/EDGE
+							(850、900、1800、1900 MHz) <br>TD-SCDMA 1900 (F)、2000 (A) <br>TD-LTE
+							(频段 38、39、40)
+						</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">数据业务</td>
+						<td>802.11a/b/g/n 无线网络 (802.11n 时工作在 2.4GHz 和 5GHz)</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">存储</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">机身内存</td>
+						<td>16GB ROM</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">运行内存</td>
+						<td>1GB RAM</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">储存卡类型</td>
+						<td>不支持</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">显示</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">屏幕尺寸</td>
+						<td>4.0英寸</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">触摸屏</td>
+						<td>电容屏，多点触控</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">分辨率</td>
+						<td>1136×640</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">屏幕材质</td>
+						<td>IPS</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">超大字体</td>
+						<td>不支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">屏幕色彩</td>
+						<td>Retina 显示屏</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">感应器</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">GPS模块</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">重力感应</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">光线感应</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">距离感应</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">摄像功能</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">摄像头</td>
+						<td>800万像素</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">副摄像头</td>
+						<td>120万像素</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">闪光灯</td>
+						<td>LED补光灯</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">自动对焦</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">娱乐功能</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">收音机</td>
+						<td>需使用第三方软件</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">音乐播放</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">视频播放</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">电视播放</td>
+						<td>需使用第三方软件</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">传输功能</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">Wi-Fi</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">蓝牙</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">WIFI热点</td>
+						<td>支持</td>
+					</tr>
+					<tr>
+						<th class="tdTitle" colspan="2">其他</th>
+					</tr>
+					<tr></tr>
+					<tr>
+						<td class="tdTitle">SIM卡尺寸</td>
+						<td>nano-sim卡</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">电池型号</td>
+						<td>内置充电式锂离子电池</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">电池类型</td>
+						<td>锂电池</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">电池更换</td>
+						<td>不支持</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">理论通话时间（小时）</td>
+						<td>3G网络长达10h</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">理论待机时间（小时）</td>
+						<td>250h</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">数据线</td>
+						<td>苹果8pin</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">耳机接口</td>
+						<td>3.5mm</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">机身尺寸（mm）</td>
+						<td>高度：123.8 毫米 (4.87 英寸) 宽度：58.6 毫米 (2.31 英寸) 厚度：7.6 毫米
+							(0.30 英寸)</td>
+					</tr>
+					<tr>
+						<td class="tdTitle">机身重量（g）</td>
+						<td>重量：112 克 (3.95 盎司)</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<p></p>
+		</div>
+		<div class="detail" id="warePack" style="display: none;">
+			<p>
+				<span> iPhone 5s×1；具有线控功能和麦克风的 Apple EarPods×1；Lightning to
+					USB 连接线×1；Lightning to Micro USB Adapter转换器×1；
+					USB电源适配器×1；三包凭证×1；卡针×1；资料<br> <br> <br>
+				</span>
+			</p>
+		</div>
+		<div class="detail" id="wareService" style="display: none;">
+			<p>
+				<span> 本产品全国联保，享受三包服务，质保期为:一年质保<br>如因质量问题或故障，凭厂商维修中心或特约维修点的质量检测证明，享受7日内退货，15日内换货，15日以上在质保期内享受免费保修等三包服务！<br>
+				</span>
+			</p>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$(function() {
+			$(".detail").hide();
+			$("#bookInfo").show();
+			$("#wareInfo").show();
+			$("li>a").click(function() {
+				if ($('#fixed').has('nav-fixed')) {
+					$('#fixed').removeClass('nav-fixed');
+				}
+				$(".detail").hide();
+				$("li>a").removeClass("on");
+				$(this).addClass("on");
+				var id = $(this).attr("value");
+				$("#" + id).show();
+			});
+			$("body").css("margin", "0 auto");
+			if ($("#wareInfo").html()) {
+				$("#wareInfo").html(
+						$("#wareInfo").html().replace(/<\/td>/g,
+								'</td></tr><tr>'));
+				$("#wareInfo").html(
+						$("#wareInfo").html().replace(/item.jd.com/g,
+								'm.jd.com/product'));
+				$("#wareInfo").html(
+						$("#wareInfo").html().replace(/www.360buy.com/g,
+								'm.jd.com'));
+			}
+			$("#wareInfo img").css("max-width", "270px");
+			$("#wareInfo table").css("width", "300px");
+			$("#wareInfo td").css("background-size", "300px");
+			$("#wareInfo td").css("max-width", "300px");
+			$("#wareInfo tr").css("max-width", "300px");
+			$("#wareInfo div").css("width", "300px");
+			$("#wareInfo div").css("height", "auto");
+			$("#wareInfo div").css("max-width", "300px");
+			$("#wareInfo div").css("word-break", "break-all");
+			$("#wareInfo ul").css("width", "300px");
+		});
+
+		$('#fixed').floatNav({
+			fixedClass : 'nav-fixed',
+			range : 30
+		});
+	</script>
+
+	<div class="login-area" id="footer">
+		<div class="login">
+			<a rel="nofollow"
+				href="http://m.jd.com/user/home.action?sid=99ffe7d3218452f047aee3e3bf708c2f">
+				liuyun96 </a> <span class="lg-bar">|</span> <a rel="nofollow"
+				href="https://passport.m.jd.com/user/logout.action?sid=99ffe7d3218452f047aee3e3bf708c2f">退出</a>
+			<span class="new-fr"><a
+				href="http://m.jd.com/showvote.html?sid=99ffe7d3218452f047aee3e3bf708c2f">反馈</a><span
+				class="lg-bar">|</span><a
+				href="http://m.jd.com/detail/1057746.html?resourceType=list&resourceValue=655&sid=99ffe7d3218452f047aee3e3bf708c2f#top">回到顶部</a></span>
+		</div>
+		<div class="version">
+			<a
+				href="http://wap.jd.com/index.html?v=w&sid=99ffe7d3218452f047aee3e3bf708c2f">标准版</a><a
+				href="javascript:void(0)" class="on">触屏版</a> <a onclick="skip();"
+				href="javascript:void(0);" id="toPcHome">电脑版</a>
+		</div>
+		<div id="clientArea">
+			<a
+				href="http://m.jd.com/download/downApp.html?sid=99ffe7d3218452f047aee3e3bf708c2f"
+				id="toClient" class="openJD">客户端</a>
+		</div>
+		<div class="copyright">© m.jd.com</div>
+	</div>
+
+	<div style="display: none;">
+		<img src="./京东触屏版详情_files/ja.jsp">
+	</div>
+
+	<script type="text/javascript" src="./京东触屏版详情_files/ping.min.js"></script>
+	<script type="text/javascript">
+		try {
+			ping.init({
+				"userPin" : "liuyun96"
+			});
+		} catch (e) {
+		}
+	</script>
+
+
+	<script type="text/javascript">
+		$("#unsupport").hide();
+		if (!testLocalStorage()) { //not support html5
+			if (0 != 0 && !$clearCart && !$teamId) {
+				$("#html5_cart_num").text(0 > 0 > 0);
+			}
+		} else {
+			updateToolBar('');
+		}
+
+		$("#html5_cart").click(function() {
+			//	syncCart('99ffe7d3218452f047aee3e3bf708c2f',true);
+			location.href = '/cart/cart.action';
+		});
+
+		function reSearch() {
+			var depCity = window.sessionStorage.getItem("airline_depCityName");
+			if (testSessionStorage() && isNotBlank(depCity)
+					&& !/^\s*$/.test(depCity) && depCity != "") {
+				var airStr = '<form action="/airline/list.action" method="post" id="reseach">'
+						+ '<input type="hidden" name="sid"  value="99ffe7d3218452f047aee3e3bf708c2f"/>'
+						+ '<input type="hidden" name="depCity" value="'
+						+ window.sessionStorage.getItem("airline_depCityName")
+						+ '"/>'
+						+ '<input type="hidden" name="arrCity" value="'
+						+ window.sessionStorage.getItem("airline_arrCityName")
+						+ '"/>'
+						+ '<input type="hidden" name="depDate" value="'
+						+ window.sessionStorage.getItem("airline_depDate")
+						+ '"/>'
+						+ '<input type="hidden" name="depTime" value="'
+						+ window.sessionStorage.getItem("airline_depTime")
+						+ '"/>'
+						+ '<input type="hidden" name="classNo" value="'
+						+ window.sessionStorage.getItem("airline_classNo")
+						+ '"/>' + '</form>';
+				$("body").append(airStr);
+				$("#reseach").submit();
+			} else {
+				window.location.href = '/airline/index.action?sid=99ffe7d3218452f047aee3e3bf708c2f';
+			}
+		}
+		//banner 关闭点击
+		$('.div_banner_close').click(function() {
+			$('#div_banner_header').unbind('click');
+			jQuery.post('/index/addClientCookieVal.json', function(d) {
+				$('#div_banner_header').slideUp(500);
+			});
+		});
+		//banner 下载点击
+		$('.div_banner_download').click(function() {
+			var downloadUrl = $(this).attr('url');
+			jQuery.post('/index/addClientCookieVal.json', function(d) {
+				window.location.href = downloadUrl;
+			});
+		});
+		window._clientVersion_ = '';
+
+		$(document).ready(
+				function() {
+					var _loadScript = function(url, options, cb) {
+						var script = document.createElement("script");
+						var def = {
+							type : "text/javascript",
+							charset : "utf-8"
+						}
+						options = options || {}
+						for ( var i in options) {
+							def[i] = options[i];
+						}
+						script.src = url;
+
+						for ( var i in def) {
+							script.setAttribute(i, def[i]);
+						}
+						script.addEventListener("load", function() {
+							cb && cb();
+						}, false)
+						document.getElementsByTagName("head")[0]
+								.appendChild(script);
+					}
+					if ($(".download-con").length || $("#clientArea").length) {
+						_loadScript("/js/2013/installapp.js?v=201405271000011",
+								{}, function() {
+									$("#clientArea").length
+											&& downcheck($("#clientArea"),
+													false);
+								});
+					}
+
+				})
+		function skip() {
+			addCookie('pcm', '1', 30, '', 'jd.com');
+			var localurl = 'http://www.jd.com/#m';
+			if (localurl == 'http://www.jd.com/#m') {
+				var localurl = document.location.href;
+				if (localurl.indexOf('http://m.jd.com/sale/mall') == 0) {
+					var saleurl = localurl.replace('http://m.jd.com/sale/mall',
+							'http://sale.jd.com/mall');
+					saleurl = saleurl + '#m'
+					window.location.href = saleurl;
+					return;
+				} else if (localurl.indexOf('http://m.jd.com/sale/act') == 0) {
+					var saleurl = localurl.replace('http://m.jd.com/sale/act',
+							'http://sale.jd.com/act');
+					saleurl = saleurl + '#m'
+					window.location.href = saleurl;
+					return;
+				} else {
+					window.location.href = 'http://www.jd.com/#m';
+					return;
+				}
+			}
+			window.location.href = localurl;
+		}
+
+		function addCookie(name, value, expires, path, domain) {
+			var str = name + "=" + escape(value);
+			if (expires != "") {
+				var date = new Date();
+				date.setTime(date.getTime() + expires * 24 * 3600 * 1000);//expires单位为天 
+				str += ";expires=" + date.toGMTString();
+			}
+			if (path != "") {
+				str += ";path=" + path;//指定可访问cookie的目录 
+			}
+			if (domain != "") {
+				str += ";domain=" + domain;//指定可访问cookie的域 
+			}
+			document.cookie = str;
+		}
+		function search_new() {
+			var a = $("#newkeyword").val();
+			if (jQuery.trim(a).length > 0) {
+				var value = a + '|';
+				var h = "searchhistory";
+				var g = localStorage.getItem(h);
+				var count = 0;
+				if (g != null) {
+					g = decodeURIComponent(g);
+					var data = g.split("|");
+					for (var i = 0; i < data.length; i++) {
+						if (i == (count != 0 ? 5 : 4)) {
+							break;
+						}
+						if (data[i] != a) {
+							value += (data[i] + '|');
+						} else {
+							count++;
+						}
+					}
+				}
+				localStorage
+						.setItem("searchhistory", encodeURIComponent(value));
+			}
+			$('#searchForm').submit();
+		}
+	</script>
+
+
+</body>
+</html>

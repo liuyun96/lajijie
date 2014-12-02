@@ -1,0 +1,271 @@
+<#include "header.html" />
+<link rel="stylesheet" type="text/css" href="/css/chongzhi.css"
+	charset="gbk">
+<script type="text/javascript" src="/js/chongzhi.js"></script>
+	<div class="window-pop" id="_confirm"
+		style="position: absolute; z-index: 9999; display: none; min-height: 124px; top: 269.5px;">
+		<div class="tip-con" id="_confirmMsg"
+			style="line-height: 25px; min-height: 80px; margin: 20px 0 10px">&nbsp;&nbsp;</div>
+		<div class="tip-btns">
+			<a href="javascript:void(0)" id="_confirmBtn" class="left-btn">确定</a>
+			<a href="javascript:void(0)" id="_cancelBtn" class="right-btn">取消</a>
+		</div>
+	</div>
+	<div class="window-pop" id="_alert"
+		style="position: absolute; z-index: 9999; display: none; min-height: 124px; top: 269.5px;">
+		<div class="tip-con" id="_alertMsg"
+			style="line-height: 25px; min-height: 80px; margin: 20px 0 10px">&nbsp;&nbsp;</div>
+		<div class="tip-btns">
+			<a href="javascript:void()" id="_alertBtn" class="left-btn"
+				style="border-right: 0px solid #f7f2ee;; width: 270px">确定</a>
+		</div>
+	</div>
+	<div class="window-pop" id="_calert"
+		style="position: absolute; z-index: 9999; display: none; min-height: 124px; top: 269.5px;">
+		<div class="tip-con" id="_calertMsg"
+			style="line-height: 25px; min-height: 80px; margin: 20px 0 10px">&nbsp;&nbsp;</div>
+		<div class="tip-btns">
+			<a href="javascript:void()" id="_calertBtn" class="left-btn"
+				style="border-right: 0px solid #f7f2ee;; width: 270px">确定</a>
+		</div>
+	</div>
+
+	<form id="chongzhi_form"
+		action="http://vm.m.jd.com/chongzhi/chongzhiConfirm.action?sid=dbd264925c2d573e392f2a6bf4f74612"
+		method="get">
+		<div class="main">
+			<div class="recharge">
+				<div class="recharge-num">
+					<input type="tel" id="mobile" name="mobile" value="18758284045"
+						max="11" style="width: 90%" class="recharge-phone"
+						autocomplete="off" placeholder="请输入要充值手机号码">
+				</div>
+				<p class="error radius" id="mobile_err_info"
+					style="display: none; margin: -10px 5px 10px;">
+					<span></span>请输入正确的手机号码
+				</p>
+				<p class="error radius" id="price_err_null"
+					style="display: none; margin: -10px 5px 10px;">
+					<span></span>请选择金额
+				</p>
+
+				<div class="recharge-sum">
+					<a class="btn-grey" id="price7" onclick="javascript:changePrice(7)">10元</a>
+					<a class="btn-grey" id="price8" onclick="javascript:changePrice(8)">20元</a>
+					<a class="btn-grey" id="price1" onclick="javascript:changePrice(1)">30元</a>
+					<a class="btn-grey" id="price2" onclick="javascript:changePrice(2)">50元</a>
+					<a class="btn-red" id="price3" onclick="javascript:changePrice(3)">100元</a>
+					<a class="btn-grey" id="price4" onclick="javascript:changePrice(4)">200元</a>
+					<a class="btn-grey" id="price5" onclick="javascript:changePrice(5)">300元</a>
+					<a class="btn-grey" id="price6" onclick="javascript:changePrice(6)">500元</a>
+					<a class="btn-grey" id="price9" onclick="jDPrice()"
+						style="display: none;">其它金额</a>
+				</div>
+				<input type="hidden" id="area" name="area" value="15"> <input
+					type="hidden" id="provider" name="isp" value="1">
+
+				<div class="p-price " id="price_type" style="padding-left: 3.125%;">
+					<p id="addr" style="float: right; margin-right: 10%;">浙江移动</p>
+					<p class="avail">
+						单价： <strong id="price_info" style="color: red; display: inline;">99.90元</strong>
+						<strong style="margin-left: 20px; height: 15px; display: none;"
+							id="chongzhi_wait"></strong>
+					</p>
+				</div>
+				<div class="donation-btns">
+					<a id="buyButton" class="btn-submit-donation btn-red" value="立即充值">立即充值</a>
+				</div>
+				<input id="buyDiv" type="submit" style="display: none" value="立即充值">
+				<div class="view-record">
+					<a
+						href="http://vm.m.jd.com/chongzhi/queryOrderList.action?sid=dbd264925c2d573e392f2a6bf4f74612">查看我的充值记录
+						&gt;</a>
+				</div>
+			</div>
+			<!--recharge end-->
+		</div>
+		<div class="mask" id="mask" style="display: none">
+			<div class="window-pop">
+				<div class="other">
+					<div>其他金额</div>
+					<div>
+						<input type="text" id="customPrice"><strong>元</strong>
+					</div>
+				</div>
+				<div class="tip-btns btn-type2">
+					<a href="javascript:jDPriceSelect(1)" class="left-btn"
+						style="width: 50%">确认</a> <a href="javascript:jDPriceSelect(0)"
+						class="right-btn" style="width: 49%">取消</a>
+				</div>
+			</div>
+		</div>
+
+
+		<input type="hidden" id="facePrice" name="facePrice" value="100.00">
+		<input type="hidden" id="sid" name="sid"
+			value="dbd264925c2d573e392f2a6bf4f74612"> <input
+			type="hidden" id="jdPrice" value="99.90"> <input
+			type="hidden" id="platform" value=""> <input type="hidden"
+			id="type" name="type" value="1">
+
+		<script type="text/javascript" src="./充值 - 京东虚拟运营商_files/chongzhi.js"></script>
+
+		<script>
+			$(document).ready(
+					function() {
+						if ('html5' == 'html5') {
+							showFoot("dbd264925c2d573e392f2a6bf4f74612", null,
+									null);//加尾部
+						}
+						if ($("#mobile").val() != '' && getUserOp() != 9) {
+							$("#price" + getUserOp()).click();
+						} else if ($("#mobile").val() != '') {
+							getPhone();
+						}
+						$("#area").change(editAddress);
+						$("#provider").change(editAddress);
+						$("#mobile").blur(getPhone);
+
+						$("#mobile").focus(function() {
+							$("#mobile_err_info").hide();
+						});
+						$("#buyButton").click(function() {
+							$("#buyDiv").click();
+						});
+						$("#chongzhi_form").submit(
+								function() {
+									if (!checkMobile()) {
+										$("#mobile_err_info").show();
+										return false;
+									}
+
+									if ($("#facePrice").val() == ''
+											|| $("#jdPrice").val() == '') {
+										$("#price_err_null").show();
+										return false;
+									}
+
+									if ($("#area").val() == 'x'
+											|| $("#provider").val() == 'x') {
+										return false;
+									}
+									return true;
+								});
+
+						$('#openContacts').click(function() {
+							try {
+								var platform = $('#platform').val();
+								openContacts(platform);
+							} catch (e) {
+								alert(e);
+							}
+
+						});
+
+					});
+		</script>
+	</form>
+	<div style="">
+		<img src="./充值 - 京东虚拟运营商_files/ja.jsp">
+	</div>
+
+
+
+	<style type="text/css">
+.new-footer {
+	margin-top: 10px;
+	background-color: #f3f2f2;
+	font-size: 14px;
+	color: #6e6e6e;
+	text-align: center
+}
+
+.new-footer .new-f-login {
+	position: relative;
+	padding: 0 12px;
+	background-color: #a8a8a8;
+	line-height: 27px;
+	color: #fff;
+	text-align: left;
+	heigth: 27px
+}
+
+.new-footer .new-f-login .new-back-top {
+	position: absolute;
+	right: 12px
+}
+
+.new-footer .new-f-login .new-bar2 {
+	margin: 0 5px
+}
+
+.new-footer .new-f-login a {
+	color: #fff
+}
+
+.new-footer .new-f-section a {
+	margin-left: 20px;
+	color: #6e6e6e
+}
+
+.new-footer .new-f-section .on {
+	color: #c30202
+}
+
+.new-footer .new-f-section a:first-child {
+	margin-left: 0
+}
+
+.new-bl {
+	padding: 0 15px
+}
+
+.new-footer .new-f-section,.new-footer .new-f-section2 {
+	padding: 10px 0
+}
+
+.new-footer .new-f-section2 {
+	padding-top: 0;
+	font-size: 12px;
+	color: #6e6e6e
+}
+
+.new-f-banner {
+	background-color: #fff
+}
+
+.new-banner-img,.new-banner-img2 {
+	width: 320px;
+	height: 61px;
+	margin: 0 auto;
+	background: url(http://m.jd.com/images/touch2013/banner_footer.gif);
+	background-color: #fff
+}
+
+.new-banner-img2 {
+	background: url(http://m.jd.com/images/touch2013/banner_footer.gif)
+}
+
+.new-banner-img3 {
+	width: 320px;
+	height: 61px;
+	margin: 0 auto;
+	background: url(http://m.jd.com/images/touch2013/banner_footer.gif) 0 0
+		no-repeat;
+	background-color: #fff
+}
+
+.new-download-app {
+	display: block;
+	width: 320px;
+	height: 61px;
+	margin: 0 auto;
+	border-bottom: 1px solid #dad4cf;
+	border-top: 1px solid #fcfaf9;
+	background-color: #fff;
+	font-size: .875em;
+	line-height: 44px;
+	text-align: center
+}
+</style>
+<#include "footer.html"/>

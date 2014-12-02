@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<!-- saved from url=(0016)http://m.jd.com/ -->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>京东触屏版</title>
+<meta name="author" content="m.jd.com">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no">
+<meta http-equiv="Expires" content="-1">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta http-equiv="Pragma" content="no-cache">
+<link rel="stylesheet" type="text/css" href="css/base2013.css"
+	charset="gbk">
+<link rel="stylesheet" type="text/css" href="css/index.css"
+	charset="gbk">
+
+<link rel="apple-touch-icon-precomposed"
+	href="http://m.jd.com/images/apple-touch-icon.png">
+<script type="text/javascript">
+			var _winLocation=window.location.href;//获得当前页面的路径，根据路径规则进行逐页替换
+			var _isWebKit = '__proto__' in {};//是否是webkit内核
+			if(_isWebKit){//如果是webkit内核，则分模块使用zepto
+				//要使用zeptojs的路径列表，可以做为分模块替换的开关
+				var _locationList=new Array();
+				//活动模块
+				_locationList.push('/activity/proActList');
+				_locationList.push('/activity/proActWareList');
+				_locationList.push('/activity/list');
+				//商品分类模块
+				_locationList.push('/category/');
+				//京东快讯模块
+				_locationList.push('/newslist.html');
+				_locationList.push('/newslist/');
+				_locationList.push('/news/');
+				//机票模块
+				_locationList.push('/airline/');
+				//酒店模块
+				_locationList.push('/hotel/');
+				//团购模块
+				_locationList.push('/tuan/');
+				//首页相关
+				_locationList.push('/hotbrand.html');//品牌馆
+				//商品筛选相关
+				_locationList.push('/ware/expandSort.action');
+				_locationList.push('/ware/categoryFilter.action');
+				_locationList.push('/ware/search.action');
+				_locationList.push('/products/');
+				_locationList.push('/index/getWare.action')//热门特惠
+				_locationList.push('/notice/');//通告模块
+				_locationList.push('/coupons/');//随地惠模块
+				_locationList.push('/chongzhi/');//手机充值模块
+				_locationList.push('/comment/');//手机推荐模块
+				_locationList.push('/pay/');//支付
+				_locationList.push('/order/');//订单
+				_locationList.push('/norder/');//订单
+				
+				_locationList.push('/sale/act/');//sale
+				_locationList.push('/sale/mall/');//sale
+				//_locationList.push('/market/floorWare.action');//掌上专享
+				
+				var _needReplace = false;
+				//如果当前路径符合要使用的路径规则，则进行替换
+				for(var i=0;i<_locationList.length;i++){
+					if(_winLocation.indexOf(_locationList[i])!=-1){
+						_needReplace=true;
+						break;
+					}
+				}
+				//如果是首页的话，则使用zepto
+				var _tmp = _winLocation.replace(/(^http:\/\/)|(\/*$)/g,'');
+				if(_tmp.indexOf('/')<0 || (_tmp.split('/').length<=2 && _tmp.indexOf('/index')>=0)){
+					_needReplace=true;
+				}
+				//如果是商品详情页的话，则使用zepto
+                var _dlocationList=new Array();
+                _dlocationList.push(/\/product\/([0-9]+)\.html/);
+                _dlocationList.push(/\/orderComment\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)\.html/);
+                _dlocationList.push(/\/consultations\/([0-9]+)-([0-9]+)\.html/);
+                _dlocationList.push(/\/comments\/([0-9]+)\.html/);
+                for(var i=0,len=_dlocationList.length;i<len;i++){
+                	if(_dlocationList[i].test(_winLocation)){
+                		_needReplace=true;
+               			 break;
+               		 }
+                }
+				if(_needReplace){
+					document.write('<script src="/js/zepto.min.js"><\/script>');
+					document.write('<script type="text/javascript">window.jQuery=window.Zepto;<\/script>');
+				}else{
+					document.write('<script src="/js/jquery-1.6.2.min.js"><\/script>');
+				}
+			}else{//如果是非webkit内核直接使用jquery
+				document.write('<script src="/js/jquery-1.6.2.min.js"><\/script>');
+			}
+		</script>
+<script src="/js/zepto.min.js"></script>
+<script type="text/javascript">window.jQuery=window.Zepto;</script>
+<script type="text/javascript" src="/js/common.js"></script>
+<script type="text/javascript" src="/js/spin.min.js"></script>
+<style></style>
+<script src="/js/installapp_home.js" type="text/javascript"
+	charset="utf-8"></script>
+</head>
+
+<body id="body" style="background: rgb(213, 213, 214);">
+	<a name="top"></a>
+	<header>
+		<div id="unsupport"
+			style="cursor: pointer; display: none; font-size: 0.925em; height: 44px; line-height: 44px; margin: 0px auto; text-align: center; width: 100%; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(218, 212, 207); border-top-width: 1px; border-top-style: solid; border-top-color: rgb(252, 250, 249);">
+			<span> 显示效果不佳？ </span> <a
+				href="http://wap.jd.com/index.html?v=w&sid=0a83c7459baf1d7af22ce377f8e1327d"
+				style="text-decoration: underline; color: blue;"> 切换到标准版 </a>
+		</div>
+
+	</header>
+	<script type="text/javascript" src="/js/index.js"></script>
+	<script type="text/javascript">$('body').css('background','#d5d5d6');$(function(){$('.new-footer').css('margin-top','0px');})</script>
+
+	<script>
+        var downClientAppEntry = document.getElementById('home-clientapp-entry');
+        var downClientAppEntryExpiredDay = 24*3600*1000*1;//7天
+        var homePresentTime = Date.now();
+
+        if(localStorage.startClosedDate == undefined){
+            downClientAppEntry.style.display = 'block';//第一次，或者用户清除过本地数据
+        }else {
+
+            if((Date.now() - localStorage.startClosedDate) > downClientAppEntryExpiredDay){
+                downClientAppEntry.style.display = 'block';
+
+            }else{
+                //在24小时内容不再出现广告
+                downClientAppEntry.style.display = 'none';
+                console.log(downClientAppEntry.style.display);
+            }
+        }
+        //点击关闭后storage添加关闭时间，隐藏图片
+        document.getElementById('entry-icon-close').onclick = function(){
+            localStorage.startClosedDate = Date.now();
+            downClientAppEntry.style.display = 'none';
+        }
+
+
+</script>
+	<div class="new-ct main">
+		<div class="banner scroll-wrapper" id="idContainer2"
+			ontouchstart="touchStart(event)" ontouchmove="touchMove(event);"
+			ontouchend="touchEnd(event);" style="overflow: hidden;">
+			<ul class="scroller"
+				style="position: relative; left: -640px; width: 800%;"
+				id="idSlider2">
+
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/6mPshdfkg0ceMi.html?resourceType=listActivity&resourceValue=0_0_1_55133&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/54730413N3769460c.jpg">
+				</a></li>
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/7AqRH06w4OUM1Vi.html?resourceType=listActivity&resourceValue=0_0_2_55188&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/546efee0N77af5feb.jpg">
+				</a></li>
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/5gPdCmF3yH8.html?resourceType=listActivity&resourceValue=0_0_3_55124&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/5473ed42N204b7ba6.jpg">
+				</a></li>
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/5RJ6pHVGWhzkZ.html?resourceType=listActivity&resourceValue=0_0_4_55152&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/547303b7N8439d0de.jpg">
+				</a></li>
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/UO4Iwe6mRV.html?resourceType=listActivity&resourceValue=0_0_5_55175&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/546f0885Ncad308f5.jpg">
+				</a></li>
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/Me5dr0T7mCkgKSLv.html?resourceType=listActivity&resourceValue=0_0_6_55127&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/546f0ad3Nd804430d.jpg">
+				</a></li>
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/3eUOBGYuCf.html?resourceType=listActivity&resourceValue=0_0_7_55243&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/546f0914Ne31004b4.jpg">
+				</a></li>
+				<li style="width: 640px;"><a
+					href="http://sale.jd.com/m/act/NEJjKfyCxtRL.html?resourceType=listActivity&resourceValue=0_0_8_55181&resourceType=index_activity&resourceValue=&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d"
+					name="6"> <img src="demo/index/546f081fNb6980899.jpg">
+				</a></li>
+			</ul>
+			<ul class="new-banner-num new-tbl-type" id="idNum">
+			</ul>
+		</div>
+		<div class="logo">
+			<img src="demo/index/logo.png" alt="logo">
+		</div>
+
+		<div class="search" style="position: relative">
+			<span class="input-box">
+				<form action="http://m.jd.com/ware/search.action" id="searchForm">
+					<input name="sid" value="0a83c7459baf1d7af22ce377f8e1327d"
+						type="hidden" autocomplete="off"> <input name="keyword"
+						type="text" id="newkeyword" class="new-input" required="" value=""
+						autocomplete="off">
+				</form> <a href="javascript:void(0)"
+				onclick="$(&#39;#searchForm&#39;).submit();" class="btn-search"><span>search</span></a>
+			</span>
+			<div class="new-srch-lst" id="shelper"
+				style="position: absolute; top: 2em; left: 3.28em; display: none; width: 404.234375px; z-index: 10;">
+				<ul>
+					<li><a onclick="writeSuggestion(&#39;未来人类&#39;)"
+						href="javascript:void(0);">未来人类</a></li>
+				</ul>
+				<div class="new-tbl-type">
+					<a href="javascript:void(0);" onclick="clearHistory()"
+						class="new-tbl-cell">清除历史记录</a><span class="new-bar"></span><a
+						href="javascript:void(0)" onclick="closeTip()"
+						class="new-tbl-cell">关闭</a>
+				</div>
+			</div>
+		</div>
+		<div class="category" style="padding-bottom: 20px">
+			<ul class="cate-menu tbl-type" id="categoryMenu">
+				<li class="tbl-cell route1 route"><a
+					href="${ctx}/index/category"
+					class="menu1" onclick="clickResponse(this)" res="1"> <span
+						class="menu1-icon"><span></span></span> <span class="cate-name">分类</span>
+				</a></li>
+				<li class="tbl-cell route2 route"><a href="${ctx}/index/cart"
+					id="html5_cart" class="menu2" onclick="clickResponse(this)" res="1">
+						<span class="menu2-icon"><span></span></span> <span
+						class="cate-name">购物车</span>
+				</a></li>
+				<li class="tbl-cell route3 route"><a
+					href="${ctx}/index/user"
+					class="menu3" onclick="clickResponse(this)" res="1"> <span
+						class="menu3-icon"><span></span></span> <span class="cate-name">我的</span>
+				</a></li>
+				<li class="tbl-cell route4 route"><a
+					href="${ctx}/index/chongzhi"
+					class="menu4" onclick="clickResponse(this)" res="1"> <span
+						class="menu4-icon"><span></span></span> <span class="cate-name">充值</span>
+				</a></li>
+				<li class="tbl-cell route5 route"><a
+					href="#"
+					class="menu6" onclick="clickResponse(this)" res="1"> <span
+						class="menu6-icon"><span></span></span> <span class="cate-name">开发中..</span>
+				</a></li>
+			</ul>
+		</div>
+
+		<div class="racks2">
+			<h2 class="racks-h2">感恩好礼</h2>
+			<div class="tbl-type">
+				<div class="tbl-cell">
+					<a
+						href="${ctx}/index/sale">
+						<img src="demo/index/546f0bb7N6dd6f1dd.jpg" class="half-img"
+						width="160" alt="时尚与温暖同在">
+					</a>
+				</div>
+				<div class="tbl-cell">
+					<div class="racks1-left" style="display: block !important">
+						<a
+							href="#"
+							class="racks-border"> <img
+							src="demo/index/546f0be6N631e950d.jpg" class="half-img"
+							width="160" alt="大吃西游">
+						</a> <a
+							href="http://sale.jd.com/m/act/aL6jStenxMd.html?resourceType=home_floor&resourceValue=8814&client=m&sid=0a83c7459baf1d7af22ce377f8e1327d">
+							<img src="demo/index/546f0c14N20f8bd7c.jpg" class="half-img"
+							width="160" alt="品读经典">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="theme-pavilion">
+			<div class="tbl-type">
+				<span class="tbl-cell"> <a
+					href="${ctx}/index/promotion_item"><img
+						src="demo/index/53cf8817N7ef2a7e4.jpg" class="half-img"
+						width="160" alt="服装鞋帽"></a>
+				</span> <span class="tbl-cell"> <a
+					href="#"><img
+						src="demo/index/rBEhV1MWxUwIAAAAAAA6CBNTYdwAAJmpQPqm6gAADog053.jpg"
+						class="half-img" width="160" alt="数码家电"></a>
+				</span>
+			</div>
+		</div>
+	</div>
+	<input type="hidden" value="8" id="activity">
+
+	<script>
+//活动轮播图
+var picCount = $("#activity").val();
+	$(".pic-num1").css("width",(picCount*30)+"px");
+	var forEach = function(array, callback){
+		for (var i = 0, len = array.length; i < len; i++) { callback.call(this, array[i], i); }
+	}
+	var st = createPicMove("idContainer2", "idSlider2", picCount);	//图片数量更改后需更改此数值
+	var nums = [];
+	//插入数字
+	for(var i = 0, n = st._count - 1; i <= n;i++){
+		var li = document.createElement("li");
+		nums[i] = document.getElementById("idNum").appendChild(li);
+	}
+	//设置按钮样式
+	st.onStart = function(){
+		//forEach(nums, function(o, i){ o.className = ""})
+		forEach(nums, function(o, i){ o.className = st.Index == i ? "new-tbl-cell on" : "new-tbl-cell"; })
+	}
+	// 重新设置浮动
+	$("#idSlider2").css("position","relative");
+	
+	var _initX = 0;
+	var _finishX = 0;
+	var _startX = 0;
+	var _startY = 0;
+	function touchStart(event) {
+		_startX = event.touches[0].clientX;
+		_startY = event.touches[0].clientY;
+		_initX = _startX;
+	}
+	function touchMove(event) {
+		var touches = event.touches;
+		var _endX = event.touches[0].clientX;
+		var _endY = event.touches[0].clientY;
+		if(Math.abs(_endY-_startY)>Math.abs(_endX-_startX)){
+			return;		
+		}
+		event.preventDefault();
+		_finishX = _endX;
+		var _absX = Math.abs(_endX-_startX);
+		var lastX = $('#idSlider2').css('left').replace('px','');
+		if(_startX>_endX){
+			st.Stop();
+			$('#idSlider2').css('left',(parseInt(lastX)-_absX)+'px');
+		}else{
+			st.Stop();
+			$('#idSlider2').css('left',(parseInt(lastX)+_absX)+'px');
+		} 
+		_startX = _endX;
+	}
+	//触屏  离开屏幕事件
+	function touchEnd(event) {
+		if(_finishX==0){
+			return;
+		}
+		if(_initX>_finishX){
+			bindEvent(_initX,_finishX);
+		}else if(_initX<_finishX){
+			bindEvent(_initX,_finishX);
+		}
+		_initX = 0;
+		_finishX = 0;
+	}
+
+    /**
+     *  绑定触屏触发事件
+     * @param start
+     * @param end
+     */
+    function bindEvent(start,end){
+         if (start >= end) {
+                   st.Next();
+                } else {
+                    st.Previous();
+                }
+    }
+	st.Run();
+	var resetScrollEle = function(){
+		$("#shelper").css("width",$("#newkeyword").width()+"px");
+		var slider2Li = $("#idSlider2 li");
+		slider2Li.css("width",$(".scroll-wrapper").width()+"px");
+		$("#shelper").css("width",$("#newkeyword").width()+"px");
+	}
+	
+	window.addEventListener("resize",function(){
+		st.Change = st._slider.offsetWidth/st._count;
+		st.Next();
+		resetScrollEle();
+	});
+	window.addEventListener("orientationchange",function(){
+		st.Change = st._slider.offsetWidth/st._count;
+		st.Next();
+		resetScrollEle();
+	})
+	resetScrollEle();
+	
+		function clickResponse(obj){
+		$('[res]').removeClass('on');
+		$(obj).addClass('on');
+		setTimeout(function(){
+			$(obj).removeClass('on');
+		},700);
+	}
+	$("#newkeyword").focus(function(){
+		setTimeout(function(){
+			 window.scrollTo(0,$("#newkeyword").offset().top-60);
+		 },10);		
+	});
+	$(document).ready(function(){
+		$("#categoryMenu li").addClass("route");
+	})
+</script>
+
+<#include "footer.html"/>
+	

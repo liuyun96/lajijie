@@ -1,0 +1,251 @@
+<#include "header.html"/>
+<link href="/css/title-bar.css" media="all" rel="stylesheet" type="text/css">
+<link href="/css/btn.css" media="all" rel="stylesheet" type="text/css">
+<link href="/csss/checkbox.css" media="all" rel="stylesheet" type="text/css">
+<link href="/css/list.css" media="all" rel="stylesheet" type="text/css">
+<link href="/css/spinner.css" media="all" rel="stylesheet" type="text/css">
+<style>
+.cart_item_text{
+    font-size:13px;
+    font-weight: bold;
+	overflow:hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+.cart_item_title{
+    font-size:14px;
+}
+.cart_item_gift{
+    font-size:13px;
+	color: #999;
+}
+.cart_item_price{
+    font-size:12px;
+}
+.cart_cutwords{
+	overflow:hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+	}
+
+</style>
+<div style="width: 100%; z-index: 1001; position: absolute; overflow: hidden; display: none; height: 759px; background: rgba(145, 145, 145, 0.4);" id="background">
+</div>
+<div class="pop" id="giftWares" style="margin-top:45px;margin-bottom:5%;z-index:1005;position: absolute;display:none"></div>
+<div id="notEmptyCart" style="display:block">
+	    <div id="paymentp"></div>
+	<div class="payment cart_item_title" style="width:100%;background-color: #FFFFFF;" id="payment">
+            <a href="javascript:checkAllHandler();" class="checkbox goods-choose-state checked" id="checkIcon-1"></a>
+            <div class="total-info">  
+                <span class="goods">共<span id="checkedNum">2</span>件商品</span> 
+                <span class="total">总计:<strong>￥<span class="red" id="cart_realPrice">5738.9</span></strong></span> 
+                <span class="sale-off">商品总额:￥<span id="cart_oriPrice">5738.9</span> 返现:￥<span id="cart_rePrice">0.0</span></span>
+            </div>
+            <a class="btn go-payment" id="submit" style="float: right; background: rgb(192, 0, 0);">去结算</a>
+    </div>
+    <ul class="list">
+    	    	<li class="row" id="product1068490">
+	<div>
+		<div class="goods-info row">  
+		<span id="checkIcon1068490" class="cart-checkbox checked" onclick="javascript:changeSelected(1068490,1)"></span>
+		<a href="http://m.jd.com/product/1068490.html?sid=84e08f57e1d07d3128b2101cf2fa4a73">
+		<img class="photo" alt="" src="/temp/5473e8e5N6c45d009.jpg" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+		
+        </a>
+		<div class="desc">  
+            <span class="title"><a href="http://m.jd.com/product/1068490.html?sid=84e08f57e1d07d3128b2101cf2fa4a73"><h4 class="cart_item_text">未来人类（Terrans Force）X411 14英寸游戏本(i7-4760HQ 8G 7200转1TB 锐炬显卡 全高清屏 薄至21mm)黑</h4></a></span>  			<div class="pay-info cart_item_price">
+				<span class="price">￥5,699.00</span>
+				<span style="color:#999999;">x</span>
+				<input type="text" class="amount  cart_item_price" onchange="modifyWare(&#39;1068490&#39;)" value="1" name="num" id="num1068490">
+				<a class="del" href="javascript:deleteWare(1068490,1)"></a>
+           	</div>
+		</div>
+	     		 			 		
+	        </div>
+	</div>
+</li>
+    	    	    	    	 	  		
+	<li id="product180967992">
+			        									        								<div class="gift-info">
+    									    					<div style="overflow:hidden;" class="cart_item_title">
+    						<span class="gift-info-sign" id="gift-info-sign180967992"> 满赠 </span> 
+							<span id="sTip180967992" class="red " style="width:120px;">活动商品已购满20.00元， 您只需再加价49.00元，即可 </span>
+							    							<a id="notGivenGift180967992" href="javascript:showChooseGifts('1' ,'180967992','1','13','950639','1')" class="receive" style="white-space: nowrap;">
+        							 领取赠品
+        						</a> 
+        											</div>  
+						<div id="givenGift180967992">
+    											</div>
+									</div>
+			    						<div class="pop" id="chooseGifts180967992" style="margin-top:0%;z-index:1005;position: absolute;display:none">
+            	<div class="pop-head">
+                	选择赠品
+                    <a href="javascript:hideChooseGifts('180967992')" class="btn-close"><span></span></a>
+                </div>
+                <div class="pop-list">
+                    <ul class="list">
+                    <!-- 所有 -->
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;905031&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift905031&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift905031"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/rBEhVlMhK5AIAAAAAAG52iSV-VMAAKGzAMUu-UAAbny379.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】镭拓（Rantopad） H1+ 包边鼠标垫 飞丝 </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥19.9</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;162867&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift162867&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift162867"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/rBEQYFMn6zsIAAAAAAHtm7SMrPIAAC4UQEriosAAe2z951.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】镭拓（Rantopad）H1丝滑鼠标垫（晨露） </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥19.9</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;317534&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift317534&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift317534"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/rBEQYFMn6xQIAAAAAAHguOL5ZjkAAC4TQIiMJ4AAeDQ807.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】镭拓（Rantopad）H1 mini 黑（京东专供） </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥11.9</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;264197&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift264197&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift264197"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/48339ba2-4555-47cc-8eb2-d5f7ba780ae5.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】地狱火(FIRE-PAD) 黑色鼠标垫（京东专供） </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥11.9</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;1170823&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift1170823&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift1170823"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/53bd128aN38311d8b.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】镭拓（Rantopad） HOT-USB 电热鼠标垫 黑色 </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥69.0</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;957723&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift957723&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift957723"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/rBEhV1MhK6AIAAAAAAIlFRSEwTEAAKGzQJFt4MAAiUt673.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】镭拓（Rantopad） AMG 包边鼠标垫 dota </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥49.9</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;1025176&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift1025176&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift1025176"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/rBEQYFMr1JsIAAAAAADXOZ0mM90AADELwKxeNUAANdR055.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】镭拓（Rantopad） ATS 铝制鼠标垫 钛金 </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥79.0</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;1235540&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift1235540&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift1235540"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/5436407fNe369c6b8.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】金士顿（Kingston）Hyperx 超薄电竞塑脂鼠标垫 单片装（磨砂表面） </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥69.0</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;1189132&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift1189132&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift1189132"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/53e8acdbN67ea67a6.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】镭拓（Rantopad） ICE+ 焕彩冰滑鼠标垫 酷睿黑 </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥89.0</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;316349&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift316349&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift316349"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/rBEbRVOOwsQIAAAAAAEbG_aiPGIAACb0wD4HyAAARsz249.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】雷柏（Rapoo）3090 笔记本型无线光学鼠标（黑色） </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥99.0</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                        <li class="" onclick="javascript:addGifts(&#39;180967992&#39;,&#39;1&#39;,&#39;16&#39;,&#39;1138626&#39;,&#39;1&#39;)" onmousedown="keydown(&#39;pressGift1138626&#39;)">
+                            <div class="goods-info">
+                                <span name="optionsGift" class="cart-checkbox" top="25px" id="pressGift1138626"></span>
+                                <img class="photo" src="./购物车-京东 – 触屏版 - 京东触屏版_files/5406ca00Nf7b252a1.jpg" width="50" height="50" alt="" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+                                <div class="desc">
+                                    <span class="title title-v1">【赠品】富勒（Fuhlen） G60 七彩炫光有线鼠标 </span>
+                                    <span class="num-price">x1 <span class="price-txt">￥69.0</span></span>
+                                </div>            
+                            </div>                   
+                        </li>
+    				                    </ul>
+                </div>
+				</div>
+    								    					<div class="goods-info row">  
+    			  					<span class="cart-checkbox checked" id="checkIcon950639" onclick="javascript:changeSelected(&#39;180967992&#39;,&#39;1&#39;,&#39;13&#39;,950639,1)"></span>
+								<a href="http://m.jd.com/product/950639.html?sid=84e08f57e1d07d3128b2101cf2fa4a73">
+    				<img class="photo" alt="" src="/temp/rBEhU1IR3R0IAAAAAAFG_JZhAUsAACNmAM_oFUAAUcU857.jpg" onerror="http://misc.360buyimg.com/lib/skin/e/i/error-jd.gif">
+    			</a>
+				<div class="desc">
+                        <a href="http://m.jd.com/product/950639.html?sid=84e08f57e1d07d3128b2101cf2fa4a73"><h4 class="cart_item_text">双飞燕（A4TECH） OP-550NU 金靴超滑针光鼠 黑色</h4></a>
+						<div class="pay-info cart_item_price">
+                            <span class="price">￥39.90</span>
+                            <span style="color:#999999;">x</span>
+							                                      							<input type="text" size="4" value="1" name="num" id="num950639" class="amount  cart_item_price" onchange="modifyWare(&#39;180967992&#39;,&#39;1&#39;,13,950639,1)">
+                                <a href="javascript:deleteWare('180967992','1',13,950639,1)" class="del"></a>
+							                          </div>  	
+						 						 	 		
+	                 </div>
+				      																<div class="sale-off-desc">  
+						  
+			  			  				  					<a href="http://m.jd.com/product/317534.html?sid=84e08f57e1d07d3128b2101cf2fa4a73">
+    					<div class="cart_item_gift">
+    						[赠品] 镭拓（Rantopad）H1 mini 黑（京东专供） 
+    					</div>
+					</a>
+				                </div>
+																								                 </div>
+				       </li>
+    </ul>   
+	        <div class="sale-off-tip-39 cart_item_title" id="pay-tip">钻石级别以下用户满59元免运费，钻石会员满39元可免运费。</div>
+</div>
+<div id="emptyCart" style="display:none">
+    <span class="empty-cart-tip">购物车空空如也，赶快去购物吧。</span>
+	<a href="http://m.jd.com/index.html?sid=84e08f57e1d07d3128b2101cf2fa4a73" class="btn go-shopping">去购物</a>
+</div>
+
+<input type="hidden" id="newOrderServer" value="true">
+<input type="hidden" id="cartNum" value="2">
+<input type="hidden" id="limitWareNum" value="1000">
+<input type="hidden" id="limitCartNum" value="50">
+<input type="hidden" id="resourceType" value="">
+<input type="hidden" id="resourceValue" value="">
+<input type="hidden" id="sid" value="84e08f57e1d07d3128b2101cf2fa4a73">
+<script type="text/javascript" src="/js/cart.js"></script>
+<script>
+$(document).ready(function(){
+			document.getElementById("background").style.height=document.getElementById("body").scrollHeight+20+"px";
+			judgeSubmit($("#cart_realPrice").text());
+		});
+</script>
+<#include "footer.html"/>
+   

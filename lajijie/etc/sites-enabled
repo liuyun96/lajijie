@@ -1,0 +1,86 @@
+
+server {
+	listen 80;
+        server_name gw.api.taobao.com;
+	location ~* ^/router/rest$ {
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-Proto https;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+		proxy_pass http://gw.api.taobao.com;
+	}        
+}
+server {
+       listen 80;
+       server_name svn.thinkzheng.com;
+        location / {
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-Proto https;
+                proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+                proxy_pass http://221.12.6.199:20080;
+        }
+}
+server {
+        listen 80;
+        server_name s13.43gz.com;
+        set_real_ip_from 0.0.0.0/0;
+	location ~* ^/yhdproxy/.*$ {
+                rewrite ^/yhdproxy/(.*) /$1?aaa break;
+                proxy_pass http://d1.yihaodianimg.com;
+                proxy_set_header Host "d1.yihaodianimg.com";
+                proxy_hide_header Content-Type;
+        }
+        location ~* ^/ppproxy/.*$ {
+                rewrite ^/ppproxy/(.*) /$1?aaa break;
+                proxy_pass http://img0.paipaiimg.com;
+                proxy_set_header Host "img0.paipaiimg.com";
+                proxy_hide_header Content-Type;
+        }
+        location ~* ^/tbproxy(/.*)$ {
+                rewrite ^/tbproxy/(.*) /$1?aaa break;
+                proxy_store off;
+                proxy_cache off;
+                proxy_buffering off;
+                proxy_pass http://img01.taobaocdn.com;
+                proxy_set_header Host "img01.taobaocdn.com";
+                proxy_hide_header Content-Type;
+        }
+        #location ~* ^/purge(/.*)$ {
+        #    allow              all;
+            #proxy_cache_purge  top-cache $1$is_args$args;
+        #}
+	location ~* ^(/tagImg/save|/flash/saveTagModel|/flash/deleteTagModel|/flash/uploadImg|/flash/deleteUploadTag|/file/upload|/file/delete|/fkhb/index/uploadPic|/fkhb/index/deleteImg|/fkbq/flash/saveTagModel|/fkbq/flash/deleteTagModel|/fkcc/flash/savePage|/fkcc/index/preview|/fkcc/index/publish|/cxyd/code/createCode|/cxyd/code/download|/cxyd/flash/saveCard|/cxyd/card/delete|/bannerPage/save|/taomag/|/placardModel/uploadPsd|/placardModel/uploadPsd|/placardModel/batchGenerateByJava|/cxyd/flash/saveActivityCard|/paipai/flash/saveTagModel|/paipai/flash/deleteTagModel|/paipai/flash/uploadImg|/paipai/flash/deleteUploadTag|/paipai/file/upload|/paipai/file/delete|/paipai/fkbq/flash/savePic|/paipai/fkhb/uploadPic|/paipai/fkhb/deleteImg|/paipai/fkhb/flash/savePlacard|/yhd/flash/saveTagModel|/yhd/flash/deleteTagModel|/yhd/flash/uploadImg|/yhd/flash/deleteUploadTag|/yhd/file/upload|/yhd/file/delete|/yhd/fkbq/flash/savePic|/yhd/fkhb/uploadPic|/yhd/fkhb/deleteImg|/placardModel/uploadPsds|/yhd/fkhb/flash/savePlacard).*$ {
+        	proxy_pass http://43gz_file;
+		proxy_http_version 1.1;
+        	proxy_set_header Connection "";
+        }
+	location ~* ^/font(.*)$ {
+            proxy_pass http://s11:9003;
+        }
+	location ~* ^/path/.*$ {
+                root         /data/top/dongji/;
+               if (!-f $request_filename) {
+        	proxy_pass http://s11.43gz.com;
+               }
+        }
+        location ~* ^.+\.(ico|gif|jpg|jpeg|png)$ {
+                root         /data/top/dongji/;
+                access_log   off;
+                expires      30d;
+       }
+        location ~* ^.+\.(css|js|xml|wav|swf|htm)$ {
+                root         /data/top/dongji/;
+                access_log   off;
+                expires      30d;
+        }
+
+       location  ~* ^.+$ {
+                proxy_pass http://43gz_dongji;
+                proxy_set_header Host $host;
+                proxy_set_header X-Real-IP $remote_addr;
+                proxy_set_header X-Forwarded-For   $proxy_add_x_forwarded_for;
+       proxy_http_version 1.1;
+        proxy_set_header Connection "";
+        }
+}

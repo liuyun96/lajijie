@@ -1,0 +1,520 @@
+<#include "header.html"/>
+<input type="hidden" id="page" value="1">
+<div class="user-bg"
+	style="background: url(/images/html5/default.png) no-repeat; background-size: cover"></div>
+<div class="user-wrapper">
+	<div class="div-user">
+		<div class="user">
+			<img src="/images/6c697579756e393631333738363630373930363734_big.jpg"
+				onerror="this.src=&#39;/images/html5/defaul.png&#39;"
+				class="user-avatar">
+			<div class="user-info">
+				<span class="user-name">liuyun96</span> <span class="user-level">银牌用户</span>
+			</div>
+			<a
+				href="https://passport.m.jd.com/user/messages.action?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+				<span class="msg">消息</span>
+			</a>
+		</div>
+	</div>
+</div>
+<div class="shortcut-navs">
+	<ul class="shortcut-nav">
+		<li><a class="link link1" href="${ctx}/index/order"> 待付款 </a></li>
+		<li><a class="link link2" href="${ctx}/index/order"> 待收货 </a></li>
+		<li><a class="link link3" href="${ctx}/index/order"> 全部订单 </a></li>
+		<li><a class="link link5" href="${ctx}/index/order"> 我的资产 </a></li>
+	</ul>
+	<ul class="shortcut-nav">
+		<li><a class="link link6" href="${ctx}/index/order"> 帐户中心 </a></li>
+		<li><a class="link link7" href="${ctx}/index/order"> 客户服务 </a></li>
+		<li><a class="link link8" href="${ctx}/index/order"> 我的预约 </a></li>
+		<li></li>
+	</ul>
+</div>
+<ul class="tab">
+	<li><a class="item" id="my_focus">我的关注</a></li>
+	<li><a class="item" id="my_favorite">店铺收藏</a></li>
+	<li><a class="item current" id="my_history">浏览记录</a></li>
+</ul>
+<ul class="tab-scroller">
+	<li class="my_focus" style="display: none;">
+		<ul class="my-focus">
+			<li><a
+				href="http://m.jd.com/product/647812.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+					<img
+					src="/images/rBEIC0-_J5AIAAAAAAFXNd_SpUEAAAJ_wBRAXYAAVdN166.jpg!q70.jpg">
+			</a>
+				<div class="description">
+					<a
+						href="http://m.jd.com/product/647812.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<span class="title">三星 Galaxy SIII I9300 3G手机（云石白）WCDMA/GSM</span>
+						<span class="price"> 暂无报价 </span>
+					</a> <a href="javascript:void(0);" did="647812" class="del delFavorite"></a>
+				</div> <span class="sale-off">比关注时降价¥1800.00元</span></li>
+			<li><a
+				href="http://m.jd.com/product/145038.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+					<img src="/images/e9bdaabd-f7b1-4183-9238-0cac042b2c2e.jpg!q70.jpg">
+			</a>
+				<div class="description">
+					<a
+						href="http://m.jd.com/product/145038.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<span class="title">雷柏（Rapoo）8100 2.4G无线多媒体蓝光键鼠套装 艺术灰</span> <span
+						class="price"> 暂无报价 </span>
+					</a> <a href="javascript:void(0);" did="145038" class="del delFavorite"></a>
+				</div> <span class="sale-off">比关注时降价¥1.00元</span></li>
+			<li><a
+				href="http://m.jd.com/product/128750.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+					<img src="/images/cc38c59c-1ffc-4525-a7f3-89a0ad24a5d7.jpg!q70.jpg">
+			</a>
+				<div class="description">
+					<a
+						href="http://m.jd.com/product/128750.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<span class="title">雷柏（Rapoo）8200 2.4G无线多媒体键鼠套装 潇洒黑</span> <span
+						class="price"> 暂无报价 </span>
+					</a> <a href="javascript:void(0);" did="128750" class="del delFavorite"></a>
+				</div> <span class="sale-off">比关注时降价¥1.00元</span></li>
+			<div id="focus"></div>
+		</ul>
+	</li>
+	<li class="my_favorite" style="display: none;">
+		<ul class="my-favorite" style="padding: 0px;">
+			<div id="favorite">
+				<div style="text-align: center; margin: 40px; font-size: 13px;">那么多宝贝，快去看看吧~</div>
+			</div>
+		</ul>
+		<div id="fresh" style="display: none;">
+			<div id="spinner" class="new-spinner"
+				style="margin-left: 670px; display: none;"></div>
+			<div class="new-load-more" style="text-align: center;" id="re_fresh">
+				<span style="font-size: 12px;">刷新</span>
+			</div>
+		</div>
+	</li>
+	<li class="my_history" style="">
+		<div id="history">
+			<ul class="my-history">
+				<li><a
+					href="http://m.jd.com/product/1057746.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<img src="/js/rBEhVFIxaGkIAAAAAAGEV0SZGCMAADEsQOGrOkAAYRv640.jpg"
+						onerror="src=&#39;/images/html5/default50x50.png&#39;">
+				</a>
+					<div class="description">
+						<a
+							href="http://m.jd.com/product/1057746.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+							<span class="title"> 苹果（APPLE）iPhone 5S 16G版
+								4G手机（金色）FDD-LTE/TD-LTE/TD-SCDMA/WCDMA/GSM</span> <span class="price">
+								¥4199.00</span>
+						</a> <a href="javascript:void(0);" did=" 1057746"
+							class="del delHistory"></a>
+					</div></li>
+			</ul>
+			<ul class="my-history">
+				<li><a
+					href="http://m.jd.com/product/1292726267.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<img src="/js/540d17f7N83083490.jpg"
+						onerror="src=&#39;/images/html5/default50x50.png&#39;">
+				</a>
+					<div class="description">
+						<a
+							href="http://m.jd.com/product/1292726267.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+							<span class="title"> 雅盾2014秋冬季 当今主流休闲时尚 纯棉 磨毛 格子衬衫 有加绒款
+								3号色 XL</span> <span class="price"> ¥116.00</span>
+						</a> <a href="javascript:void(0);" did=" 1292726267"
+							class="del delHistory"></a>
+					</div></li>
+			</ul>
+			<ul class="my-history">
+				<li><a
+					href="http://m.jd.com/product/770852.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<img src="/images/54447930N043a8cdd.jpg"
+						onerror="src=&#39;/images/html5/default50x50.png&#39;">
+				</a>
+					<div class="description">
+						<a
+							href="http://m.jd.com/product/770852.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+							<span class="title"> 鑫盾 高清透超耐磨手机贴膜 适用于苹果iPhone5/5S 前后
+								新老包装随机发货</span> <span class="price"> ¥29.00</span>
+						</a> <a href="javascript:void(0);" did=" 770852"
+							class="del delHistory"></a>
+					</div></li>
+			</ul>
+			<ul class="my-history">
+				<li><a
+					href="http://m.jd.com/product/1217494.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<img src="/images/542d09b6Nab051da1.jpg"
+						onerror="src=&#39;/images/html5/default50x50.png&#39;">
+				</a>
+					<div class="description">
+						<a
+							href="http://m.jd.com/product/1217494.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+							<span class="title"> 苹果（APPLE）iPhone 6 A1589 16G版
+								4G手机（深空灰）TD-LTE/TD-SCDMA/GSM</span> <span class="price">
+								¥5288.00</span>
+						</a> <a href="javascript:void(0);" did=" 1217494"
+							class="del delHistory"></a>
+					</div></li>
+			</ul>
+			<ul class="my-history">
+				<li><a
+					href="http://m.jd.com/product/1023220655.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+						<img src="/images/538de6eaNb7d6ff99.jpg"
+						onerror="src=&#39;/images/html5/default50x50.png&#39;">
+				</a>
+					<div class="description">
+						<a
+							href="http://m.jd.com/product/1023220655.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f">
+							<span class="title">
+								宾格（BINGER）手表瑞士男士背透镂空全自动机械表精钢带双日历夜光防水自由永恒男表腕表 钢带黑面银针</span> <span
+							class="price"> ¥399.00</span>
+						</a> <a href="javascript:void(0);" did=" 1023220655"
+							class="del delHistory"></a>
+					</div></li>
+			</ul>
+		</div>
+		<div id="box" style="">
+			<div id="spinner" class="new-spinner"></div>
+			<div class="new-load-more" style="text-align: center;"
+				id="con_more_hi">
+				<span style="font-size: 12px;">加载更多</span>
+			</div>
+		</div>
+	</li>
+</ul>
+
+<script type="text/javascript">
+	$(window).unload(function() {
+		$('#page').val("1");
+	});
+
+	var spinner = createSpinner();
+	var screenWidth = parseInt(document.body.clientWidth);
+	$("#spinner").css("margin-left", (screenWidth / 2 - 50) + "px");
+	$(window).resize(function() {
+		var screenWidth = parseInt(document.body.clientWidth);
+		$("#spinner").css("margin-left", (screenWidth / 2 - 50) + "px");
+	});
+
+	$('#my_focus').click(function() {
+		$('#page').val("1");
+		$('#focus').html('');
+		$('#my_history').removeClass("current");
+		$('#my_focus').addClass("current");
+		$('#my_favorite').removeClass("current");
+		$('.my_focus').show();
+		$("#spinner").hide();
+		$('.my_favorite').hide();
+		$('.my_history').hide();
+	});
+
+	$('#smallCoffer')
+			.click(
+					function() {
+						window.location.href = 'http://jrapp.jd.com/s/redirect.action?sid=5f8f2046d4dd1fab960c5ad7314ae85f'; //'https://pay.m.jd.com/checkstand/cofferAccount.action?sid=5f8f2046d4dd1fab960c5ad7314ae85f';
+					});
+
+	$('#my_favorite').click(function() {
+		$('#favorite').html('');
+		$('#my_history').removeClass("current");
+		$('#my_focus').removeClass("current");
+		$('#my_favorite').addClass("current");
+		$('.my_favorite').show();
+		$('.my-favorite').css('padding', '12px');
+		$('.my_focus').hide();
+		$('.my_history').hide();
+		reqFavShop();
+	});
+
+	$('#re_fresh').live("click", function() {
+		$('#favorite').html('');
+		$(this).hide();
+		$("#spinner").show();
+		spinner.spin($("#spinner")[0]);
+		reqFavShop();
+	});
+
+	function reqFavShop() {
+		jQuery
+				.post(
+						'/user/favShop.json?sid=5f8f2046d4dd1fab960c5ad7314ae85f',
+						{},
+						function(data) {
+							if (data != null && data.flag) {
+								if (data.favShopList
+										&& data.favShopList.length > 0) {
+									jQuery
+											.each(
+													data.favShopList,
+													function(i, v) {
+														var content = '<li> '
+																+ '<a href="http://ok.jd.com/m/index-' + v.shopId +'.htm"> '
+																+ '<img class="left" src="'+v.logoUrl+'" onerror="src=\'/images/html5/default50x50.png\'"/> '
+																+ '<div> '
+																+ '<div> '
+																+ '<span> '
+																+ v.shopName
+																+ '</span> '
+																+ '</div> '
+																+ '<div>'
+																+ '<span class="new-mu-heart"> '
+														var wid = v.score * 10;
+														content += '<span class="new-mu-heartv" style="width:'
+																+ wid
+																+ '%"> '
+																+ '</span> '
+																+ '</span> '
+																+ '</div>'
+																+ '</div> '
+																+ '</a> '
+																+ '</div> '
+																+ '</li> ';
+														$('#favorite').append(
+																content);
+													});
+								} else {
+									var content = '<div style="text-align:center;margin:40px;font-size:13px;">那么多宝贝，快去看看吧~</div>'
+									$('.my-favorite').css('padding', '0px');
+									$('#favorite').append(content);
+								}
+							} else {
+								var content = '<div style="text-align:center;margin:40px;font-size:13px;">加载异常，刷新试试~</div>'
+								$('.my-favorite').css('padding', '0px');
+								$('#favorite').append(content);
+								$('#fresh').show();
+							}
+						});
+	}
+
+	$('.toShop')
+			.live(
+					"click",
+					function() {
+						var keyword = $(this).attr("did");
+						jQuery
+								.get(
+										'http://m.jd.com/ware/getShopUrl.json?sid=5f8f2046d4dd1fab960c5ad7314ae85f',
+										{
+											keyword : keyword
+										},
+										function(data) {
+											if (data != null && data.jshop) {
+												window.location.href = data.jshop.url;
+											}
+										}, "json");
+					});
+
+	$('#my_history').click(function() {
+		if ($('#history').html() != '') {
+			$('#history').html('');
+		}
+		$('#page').val("1");
+		$('#my_focus').removeClass("current");
+		$('#my_favorite').removeClass("current");
+		$('#my_history').addClass("current");
+		$('.my_history').show();
+		$('.my_focus').hide();
+		$('.my_favorite').hide();
+		var content = "";
+		reqHistory(1);
+	});
+
+	$("#con_more")
+			.click(
+					function() {
+						$(this).hide();
+						$("#spinner").show();
+						spinner.spin($("#spinner")[0]);
+						var nextPage = parseInt($('#page').val()) + 1;
+						$('#page').val(nextPage);
+						jQuery
+								.post(
+										'/user/favorites.json?sid=5f8f2046d4dd1fab960c5ad7314ae85f',
+										{
+											page : nextPage
+										},
+										function(data) {
+											spinner.stop();
+											$("#spinner").hide();
+											$("#con_more").show();
+											jQuery
+													.each(
+															data.favorites,
+															function(i, v) {
+																var chooseUrl = 'http://m.jd.com/product/{wareId}.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f';
+																var priceUrl = 'http://price.360buyimg.com/gp{wareId},1.png';
+																if (data.favorites
+																		&& data.favorites.length > 0) {
+																	var content = '<li> '
+																			+ '<a href="'
+																			+ chooseUrl
+																					.replace(
+																							'{wareId}',
+																							v.wareId)
+																			+ '"> '
+																			+ '<img src="'
+																			+ v.imageurl
+																					.replace(
+																							'/n4/',
+																							'/n2/')
+																			+ '"/> '
+																			+ '<div class="description"> '
+																			+ '<span class="title"> '
+																			+ v.wname
+																			+ '</span> '
+																			+ '<span class="price"> ';
+
+																	if (v.jdPrice
+																			&& v.jdPrice != ""
+																			&& v.jdPrice
+																					.toLowerCase() != "null") {
+																		var _float = 0.0;
+																		if (parseFloat(v.jdPrice) > 0) {
+																			content += '&yen;'
+																					+ v.jdPrice;
+																		} else {
+																			content += '暂无报价 ';
+																		}
+																	} else {
+																		content += '暂无报价 ';
+																	}
+
+																	content += '</span> '
+																			+ '</a>'
+																			+ '<a href="javascript:void(0);" did=" '
+																			+ v.wareId
+																			+ '"class="del delFavorite"></a> '
+																			+ ' </div> ';
+																	if (v.diffPrice != "0") {
+																		content += '<span class="sale-off">比关注时降价&yen; '
+																				+ v.diffPrice
+																				+ '元</span> ';
+																	}
+																	+'</li> '
+																	$('#focus')
+																			.append(
+																					content);
+																}
+															})
+											if (nextPage >= data.totalpage) {
+												$("#con_more").hide();
+											}
+										});
+					});
+
+	$("#con_more_hi").live('click', function() {
+		$(this).hide();
+		$("#spinner").show();
+		spinner.spin($("#spinner")[0]);
+		var nextPage = parseInt($('#page').val()) + 1;
+		$('#page').val(nextPage);
+		reqHistory(nextPage);
+	});
+
+	function reqHistory(nextPage) {
+		jQuery
+				.post(
+						'/user/history.json?sid=5f8f2046d4dd1fab960c5ad7314ae85f',
+						{
+							page : nextPage
+						},
+						function(data) {
+							spinner.stop();
+							if (data != null && data.flag) {
+								jQuery
+										.each(
+												data.history,
+												function(i, v) {
+													var chooseUrl = 'http://m.jd.com/product/{wareId}.html?sid=5f8f2046d4dd1fab960c5ad7314ae85f';
+													var priceUrl = 'http://price.360buyimg.com/gp{wareId},1.png';
+													if (data.history.length > 0) {
+														var content = '<ul class="my-history"> '
+																+ '<li> '
+																+ '<a href="'
+																+ chooseUrl
+																		.replace(
+																				'{wareId}',
+																				v.wareId)
+																+ '"> '
+																+ '<img src="'
+																+ v.imageurl
+																		.replace(
+																				'/n4/',
+																				'/n2/')
+																+ '" onerror="src=\'/images/html5/default50x50.png\'"/> '
+																+ '<div class="description"> '
+																+ '<span class="title"> '
+																+ v.wname
+																+ '</span> '
+																+ '<span class="price"> ';
+
+														if (v.jdPrice
+																&& v.jdPrice != ""
+																&& v.jdPrice
+																		.toLowerCase() != "null") {
+															var _float = 0.0;
+															if (parseFloat(v.jdPrice) > 0) {
+																content += '&yen;'
+																		+ v.jdPrice;
+															} else {
+																content += '暂无报价 ';
+															}
+														} else {
+															content += '暂无报价 ';
+														}
+
+														content += '</span> '
+																+ '</a> '
+																+ '<a href="javascript:void(0);" did=" '
+																+ v.wareId
+																+ '"class="del delHistory"></a> '
+																+ '</li> '
+																+ '</div> '
+																+ '</ul> ';
+														$('#history').append(
+																content);
+													}
+												});
+							} else {
+								var content = '<div style="text-align:center;margin:40px;font-size:13px;">那么多宝贝，快去看看吧~</div>';
+								$('#history').append(content);
+							}
+							if (data.totalPage > 1 && data.totalPage > nextPage) {
+								$('#box').show();
+								$("#spinner").hide();
+								$("#con_more_hi").show();
+							} else {
+								$('#box').hide();
+							}
+						});
+	}
+
+	$(".delFavorite").live('click', function() {
+		var wareId = jQuery(this).attr("did").trim();
+		if (confirm("确定要取消该收藏吗？")) {
+			jQuery.get("/user/cancelFavorite.json", {
+				"wareId" : wareId,
+				"sid" : '5f8f2046d4dd1fab960c5ad7314ae85f'
+			}, function(data) {
+				alert(data.cancelFavorite);
+				location.reload(true);
+			}, "json");
+		} else {
+			return false;
+		}
+	});
+
+	$(".delHistory").live('click', function() {
+		var wareId = jQuery(this).attr("did").trim();
+		if (confirm("确定要删除该浏览记录吗？")) {
+			jQuery.get("/user/cancelHistory.json", {
+				"wareId" : wareId,
+				"sid" : '5f8f2046d4dd1fab960c5ad7314ae85f'
+			}, function(data) {
+				location.reload(true);
+			}, "json");
+		} else {
+			return false;
+		}
+	});
+</script>
+<#include "footer.html" />

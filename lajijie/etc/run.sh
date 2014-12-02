@@ -1,0 +1,1 @@
+ java -Xms128M -Xmx160M -Dlog4j.configuration=log4j.properties -cp WEB-INF/lib/*:WEB-INF/classes com.liuy.lajijie

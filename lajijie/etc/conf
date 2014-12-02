@@ -1,0 +1,37 @@
+
+upstream 43gz_dongji{
+        fair;
+        check interval=1000 rise=2 fall=1 timeout=10000;    #每1000毫秒检查后端服务器，失败1次标注为失败，成功2次标注为成功，超时10000毫秒为失败，失败的服务器不再发送请求，直到成功为止。
+        server s13:9000;
+        server s11:9000;
+        keepalive 16;
+}
+upstream 43gz_file{
+        fair;
+        server s11:9000;
+        server s11:9002;
+        keepalive 8;
+}
+upstream taobaocdn{
+        fair;
+        check interval=1000 rise=2 fall=1 timeout=10000;    #每1000毫秒检查后端服务器，失败1次标注为失败，成功2次标注为成功，超时10000毫秒为失败，失败的服务器不再发送请求，直到成功为止。
+	server img.taobaocdn.com:80;
+        server img01.taobao.com:80;
+        server img02.taobao.com:80;
+        server img03.taobao.com:80;
+        server img04.taobao.com:80;
+        server img05.taobao.com:80;
+        server img06.taobao.com:80;
+        server img07.taobao.com:80;
+        server img08.taobao.com:80;
+}
+upstream 43gz_shop{
+	server 127.0.0.1:9100;
+}
+upstream 43gz_bird{
+	server 127.0.0.1:9010;
+}
+upstream 43gz_www{
+        server 127.0.0.1:9010;
+}
+

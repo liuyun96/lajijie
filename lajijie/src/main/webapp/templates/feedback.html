@@ -1,0 +1,31 @@
+<#include "header_base.html"/>
+<div class="feedback m list">
+	<form
+		action="http://m.jd.com/index/doShowvote.action?sid=5f8f2046d4dd1fab960c5ad7314ae85f"
+		method="post">
+		<div class="mc">
+			<ul class="radius">
+				<li>购买和售后支持请拨打24小时客服热线：<a href="tel:4006065500"
+					style="color: #0000cc">400-606-5500</a><br> 手机京东相关问题，请填写下表：
+				</li>
+				<li>反馈类型：<select name="type">
+						<option value="功能意见">功能意见</option>
+						<option value="界面意见">界面意见</option>
+						<option value="您的新需求">您的新需求</option>
+						<option value="操作意见">操作意见</option>
+						<option value="流量问题">流量问题</option>
+						<option value="其他">其他</option>
+				</select></li>
+				<li>反馈内容：<textarea class="common-input" name="content"
+						maxlength="300"></textarea></li>
+				<li class="last">联系方式：<input type="text" class="common-input"
+					name="contact" value="" maxlength="15"> <input
+					type="hidden" name="client" value="touch"></li>
+			</ul>
+		</div>
+		<input type="submit" value="提交" class="sub_btn">
+
+	</form>
+
+</div>
+<#include "footer.html" />
